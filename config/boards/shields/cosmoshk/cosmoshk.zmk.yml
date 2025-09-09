@@ -1,0 +1,12 @@
+file_format: "1"
+id: cosmoshk
+name: Cosmoshk
+type: shield
+url: https://github.com/pcmind/cosomoshk
+requires: [pro_micro]
+features:
+  - keys
+  - sudio
+siblings:
+  - cosmoshk_left
+  - cosmoshk_right
