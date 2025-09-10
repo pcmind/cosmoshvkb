@@ -1,0 +1,7 @@
+# My personal keyboard
+
+This is my personal wireless keyboard, generated with Cosmos keyboad generator tool. This is my first attempt to create a keyboad.
+
+This repo contains the zmk configuration of the board and the 3d case files.
+
+The keyboard link: https://ryanis.cool/cosmos/beta#cm:CqUBChUSBRCQcSATEgIgABIAOB5AgIaKwAcKGxIFEJBlIBMSAiAAEgMQsDsSBRCwayAoOApAAAoeEgUQkFkgExICIAASAxCwLxIFELBfICg4CUCA8LwCChESBRCQTSATEgIgABIAOB1AAAoREgUQkEEgExICIAASADgxQAAKGhIEEBAgExIGEKCACiAAEgIQMDgyQICGisAHGABA6IWgrvBVSNzwoqABCpUBCnYSFgiAMBDAgAIgAECLhdiWEEiNhYDA3Q0SEwiAMBBAIABAmsSWCEiNhYDA3Q0SDyAAQK2F3ANImYmEnuDcEBIQIABA4oPY0AFI6ZOcl6DwERIPIABAz+KPOEiDj5yXoL0SEhEgAEDwhbyXsAFI4Z3MjcDYEjgAGAIiCgjIARDIARgAIABAnY3MrPAzSKap4MbwswgYhCAiAyDUDIIBAgQCWE9oAA==
