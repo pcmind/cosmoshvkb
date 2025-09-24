@@ -19,13 +19,25 @@
             //               | LFT | RGT  |                                                |  UP   |  DWN |
             //                     | CTRL | SPC  | MOUS |                   | RSE  |  ENT  |  SPC  |
             //                            | ENT  | L_1  |                   | LWR  |  GUI  |
+
             bindings = <
-&kp ESC       &kp Q  &kp W         &kp E              &kp R            &kp T               &kp Y            &kp U          &kp I           &kp O            &kp P          &kp DEL
-&kp TAB       &kp A  &kp S         &kp D              &kp F            &kp G               &kp H            &kp J          &kp K           &kp L            &kp SEMICOLON  &kp BACKSLASH
-&kp LEFT_GUI  &kp Z  &kp X         &kp C              &kp V            &kp B               &kp N            &kp M          &kp COMMA       &kp DOT          &kp SLASH      &kp RIGHT_GUI
-                     &kp UP_ARROW  &kp DOWN_ARROW                                                                          &kp LEFT_ARROW  &kp RIGHT_ARROW
-                                   &kp LEFT_CONTROL   &kp SPACE        &kp LEFT_SHIFT      &kp ENTER        &kp BACKSPACE  &kp RIGHT_SHIFT
-                                                       &kp LEFT_SHIFT  &kp DELETE          &kp SPACE        &kp RIGHT_GUI 
+&kp ESC       &kp Q  &kp W         &kp E             &kp R      &kp T           &kp Y      &kp U          &kp I            &kp O            &kp P          &kp DEL
+&kp TAB       &kp A  &kp S         &kp D             &kp F      &kp G           &kp H      &kp J          &kp K            &kp L            &kp SEMICOLON  &kp BACKSLASH
+&kp LEFT_GUI  &kp Z  &kp X         &kp C             &kp V      &kp B           &kp N      &kp M          &kp COMMA        &kp DOT          &kp SLASH      &kp RIGHT_GUI
+                     &kp UP_ARROW  &kp DOWN_ARROW                                                         &kp LEFT_ARROW   &kp RIGHT_ARROW
+                                   &kp LEFT_CONTROL  &kp SPACE  &kp TAB         &kp ENTER  &kp BACKSPACE  &kp RIGHT_SHIFT
+                                                     &kp A      &kp B    &kp C  &kp D
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans                                          &trans  &trans
+                        &trans  &trans  &trans          &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans
             >;
         };
     };
