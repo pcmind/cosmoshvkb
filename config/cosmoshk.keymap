@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     keymap {
@@ -22,16 +23,71 @@
             //                            | ENT  | L_1  |                   | LWR  |  GUI  |
 
             bindings = <
-&kp ESC       &kp Q  &kp W         &kp E             &kp R      &kp T             &kp Y      &kp U          &kp I            &kp O            &kp P          &kp DEL
-&kp TAB       &kp A  &kp S         &kp D             &kp F      &kp G             &kp H      &kp J          &kp K            &kp L            &kp SEMICOLON  &kp BACKSLASH
-&kp LEFT_GUI  &kp Z  &kp X         &kp C             &kp V      &kp B             &kp N      &kp M          &kp COMMA        &kp DOT          &kp SLASH      &kp RIGHT_GUI
-                     &kp UP_ARROW  &kp DOWN_ARROW                                                           &kp LEFT_ARROW   &kp RIGHT_ARROW
-                                   &kp LEFT_CONTROL  &kp SPACE  &lt 1 TAB         &kp ENTER  &kp BACKSPACE  &kp RIGHT_SHIFT
-                                                     &kp A      &kp B      &kp C  &kp D
+&kp ESC        &kp Q  &kp W         &kp E             &kp R        &kp T             &kp Y        &kp U            &kp I            &kp O            &kp P          &kp DEL
+&kp BACKSPACE  &kp A  &kp S         &kp D             &kp F        &kp G             &kp H        &kp J            &kp K            &kp L            &kp SEMICOLON  &kp BACKSLASH
+&kp LEFT_GUI   &kp Z  &kp X         &kp C             &kp V        &kp B             &kp N        &kp M            &kp COMMA        &kp DOT          &kp SLASH      &kp RIGHT_GUI
+                      &kp UP_ARROW  &kp DOWN_ARROW                                                                 &kp LEFT_ARROW   &kp RIGHT_ARROW
+                                    &kp LEFT_CONTROL  &lt 1 SPACE  &lt 3 TAB         &lt 4 ENTER  &lt 2 BACKSPACE  &kp RIGHT_SHIFT
+                                                      &none        &tog 5     &none  &caps_word
             >;
         };
 
-        layer_1 {
+        arrows {
+            bindings = <
+&kp ESCAPE  &trans        &kp LC(RA(LEFT))        &kp LC(LA(RIGHT))  &trans          &trans                 &kp LS(LC(Z))  &kp LC(V)  &kp LC(C)       &kp LC(X)     &kp LC(Z)  &kp DEL
+&trans      &kp LEFT_GUI  &kp LEFT_ALT            &kp LEFT_CONTROL   &kp LEFT_SHIFT  &trans                 &kp CLCK       &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
+&trans      &kp LC(Z)     &kp LC(X)               &kp LC(C)          &kp LC(V)       &kp LC(LS(Z))          &kp INS        &kp HOME   &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &trans
+                          &kp LC(LG(LEFT_ARROW))  &kp LC(LG(RIGHT))                                                                   &trans          &trans
+                                                  &trans             &trans          &trans                 &trans         &trans     &trans
+                                                                     &trans          &trans         &trans  &trans
+            >;
+        };
+
+        num {
+            bindings = <
+&kp ESC  &kp COMMA      &kp N7  &kp N8  &kp N9  &kp FSLH              &trans  &trans     &trans     &trans    &trans    &kp DEL
+&trans   &kp MINUS      &kp N4  &kp N5  &kp N6  &kp PLUS              &trans  &kp RSHFT  &kp RCTRL  &kp LALT  &kp LGUI  &trans
+&trans   &kp LS(EQUAL)  &kp N1  &kp N2  &kp N3  &kp LS(STAR)          &trans  &trans     &trans     &kp RALT  &trans    &trans
+                        &trans  &trans                                                   &trans     &trans
+                                &trans  &kp N0  &kp PERIOD            &trans  &trans     &trans
+                                        &trans  &trans        &trans  &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+&kp ESC  &trans     &trans     &kp LC(E)  &trans     &trans                 &kp LS(LC(Z))  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)        &trans
+&trans   &kp LC(A)  &kp LALT   &kp LCTRL  &kp LSHFT  &trans                 &kp C_MENU     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
+&trans   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(Z))          &trans         &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+                    &trans     &trans                                                                      &trans          &trans
+                               &trans     &trans     &trans                 &mkp MB3       &mkp LCLK       &mkp RCLK
+                                          &trans     &trans         &trans  &trans
+            >;
+        };
+
+        sym {
+            bindings = <
+&trans     &kp GRAVE         &kp MINUS             &kp LS(RIGHT_BRACKET)  &kp RIGHT_BRACKET  &kp LS(N7)                &trans  &kp SQT    &kp BACKSLASH  &kp LS(NON_US_BACKSLASH)  &trans    &trans
+&kp RA(E)  &kp LS(GRAVE)     &kp LS(LEFT_BRACKET)  &kp LS(NUMBER_6)       &kp LS(MINUS)      &kp LS(N5)                &trans  &kp LSHFT  &kp RCTRL      &kp LALT                  &kp LGUI  &trans
+&trans     &kp LA(NUMBER_2)  &kp LS(NUMBER_1)      &kp LS(NUMBER_2)       &kp LS(NUMBER_3)   &kp LS(NUMBER_4)          &trans  &trans     &trans         &kp RALT                  &trans    &trans
+                             &trans                &trans                                                                                 &trans         &trans
+                                                   &trans                 &trans             &trans                    &trans  &trans     &trans
+                                                                          &trans             &trans            &trans  &trans
+            >;
+        };
+
+        fun {
+            bindings = <
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN          &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp INSERT               &trans  &kp RSHFT  &kp RCTRL  &kp LALT  &kp LGUI  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans                   &trans  &trans     &trans     &trans    &trans    &trans
+                 &trans  &trans                                                      &trans     &trans
+                         &none   &none   &trans                   &trans  &trans     &trans
+                                 &trans  &trans           &trans  &trans
+            >;
+        };
+
+        bluetooth {
             bindings = <
 &bt BT_CLR_ALL  &bt BT_PRV  &bt BT_PRV  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans      &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
