@@ -119,19 +119,19 @@
 
         num {
             bindings = <
-&kp ESC  &kp COMMA     &kp N7  &kp N8  &kp N9     &kp FSLH              &trans  &trans     &trans     &trans    &trans    &kp DEL
-&trans   &kp PT_MINUS  &kp N4  &kp N5  &kp N6     &kp PT_PLUS           &trans  &kp RSHFT  &kp RCTRL  &kp LALT  &kp LGUI  &trans
-&trans   &kp PT_EQUAL  &kp N1  &kp N2  &kp N3     &kp PT_ASTRK          &trans  &trans     &trans     &kp RALT  &trans    &trans
-                       &trans  &trans                                                      &trans     &trans
-                               &trans  &kp PT_N0  &kp PERIOD            &trans  &trans     &trans
-                                       &trans     &trans        &trans  &trans
+&trans  &kp COMMA     &kp N7  &kp N8  &kp N9     &kp PT_FSLH           &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp PT_MINUS  &kp N4  &kp N5  &kp N6     &kp PT_PLUS           &trans  &kp RSHFT  &kp RCTRL  &kp LALT  &kp LGUI  &trans
+&trans  &kp PT_EQUAL  &kp N1  &kp N2  &kp N3     &kp PT_ASTRK          &trans  &trans     &trans     &kp RALT  &trans    &trans
+                      &trans  &trans                                                      &trans     &trans
+                              &trans  &kp PT_N0  &kp PERIOD            &trans  &trans     &trans
+                                      &trans     &trans        &trans  &trans
             >;
         };
 
         mouse {
             bindings = <
 &kp ESC  &trans     &trans     &kp LC(E)  &trans     &trans                 &kp LS(LC(Z))  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)        &trans
-&trans   &kp LC(A)  &kp LALT   &kp LCTRL  &kp LSHFT  &trans                 &kp C_MENU     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
+&trans   &kp LC(A)  &kp LALT   &kp LCTRL  &kp LSHFT  &trans                 &kp K_MENU     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
 &trans   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(Z))          &trans         &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
                     &trans     &trans                                                                      &trans          &trans
                                &trans     &trans     &trans                 &mkp MB3       &mkp LCLK       &mkp RCLK
