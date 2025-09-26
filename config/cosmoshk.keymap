@@ -54,6 +54,30 @@
         };
     };
 
+    behaviors {
+        hrm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+        };
+
+        sfthold: sticky_or_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "STICKY_OR_HOLD";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
+            flavor = "balanced";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -67,12 +91,12 @@
             //                            | ENT  | L_1  |                   | LWR  |  GUI  |
 
             bindings = <
-&kp ESC        &kp Q  &kp W         &kp E             &kp R        &kp T             &kp Y        &kp U              &kp I            &kp O            &kp P          &kp DEL
-&kp BACKSPACE  &kp A  &mt LALT S    &mt LCTRL D       &mt LSHFT F  &kp G             &kp H        &mt RIGHT_SHIFT J  &mt RCTRL K      &mt LEFT_ALT L   &kp SEMICOLON  &kp BACKSLASH
-&kp LEFT_GUI   &kp Z  &kp X         &kp C             &kp V        &kp B             &kp N        &kp M              &kp COMMA        &kp DOT          &kp SLASH      &kp RIGHT_GUI
-                      &kp UP_ARROW  &kp DOWN_ARROW                                                                   &kp LEFT_ARROW   &kp RIGHT_ARROW
-                                    &kp LEFT_CONTROL  &lt 1 SPACE  &lt 3 TAB         &lt 4 ENTER  &lt 2 BACKSPACE    &kp RIGHT_SHIFT
-                                                      &none        &tog 5     &none  &caps_word
+&kp ESC        &kp Q  &kp W         &kp E             &kp R         &kp T             &kp Y        &kp U               &kp I                           &kp O            &kp P          &kp DEL
+&kp BACKSPACE  &kp A  &hrm LALT S   &hrm LCTRL D      &hrm LSHFT F  &kp G             &kp H        &hrm RIGHT_SHIFT J  &hrm RCTRL K                    &hrm LEFT_ALT L  &kp SEMICOLON  &kp BACKSLASH
+&kp LEFT_GUI   &kp Z  &kp X         &kp C             &kp V         &kp B             &kp N        &kp M               &kp COMMA                       &kp DOT          &kp SLASH      &kp RIGHT_GUI
+                      &kp UP_ARROW  &kp DOWN_ARROW                                                                     &kp LEFT_ARROW                  &kp RIGHT_ARROW
+                                    &kp LEFT_CONTROL  &lt 1 SPACE   &lt 3 TAB         &lt 4 ENTER  &lt 2 BACKSPACE     &sfthold LEFT_SHIFT LEFT_SHIFT
+                                                      &kp RETURN    &mo 5      &none  &caps_word
             >;
         };
 
@@ -111,12 +135,12 @@
 
         sym {
             bindings = <
-&trans     &kp GRAVE         &kp MINUS             &kp LS(RIGHT_BRACKET)  &kp RIGHT_BRACKET  &kp LS(N7)                &trans  &kp SQT    &kp BACKSLASH  &kp LS(NON_US_BACKSLASH)  &trans    &trans
-&kp RA(E)  &kp LS(GRAVE)     &kp LS(LEFT_BRACKET)  &kp LS(NUMBER_6)       &kp LS(MINUS)      &kp LS(N5)                &trans  &kp LSHFT  &kp RCTRL      &kp LALT                  &kp LGUI  &trans
-&trans     &kp LA(NUMBER_2)  &kp LS(NUMBER_1)      &kp LS(NUMBER_2)       &kp LS(NUMBER_3)   &kp LS(NUMBER_4)          &trans  &trans     &trans         &kp RALT                  &trans    &trans
-                             &trans                &trans                                                                                 &trans         &trans
-                                                   &trans                 &trans             &trans                    &trans  &trans     &trans
-                                                                          &trans             &trans            &trans  &trans
+&trans     &kp GRAVE      &kp MINUS             &kp LS(RIGHT_BRACKET)  &kp RIGHT_BRACKET  &kp LS(N7)                &trans  &kp SQT    &kp BACKSLASH  &kp LS(NON_US_BACKSLASH)  &trans    &trans
+&kp RA(E)  &kp LS(GRAVE)  &kp LS(LEFT_BRACKET)  &kp LS(NUMBER_6)       &kp LS(MINUS)      &kp LS(N5)                &trans  &kp LSHFT  &kp RCTRL      &kp LALT                  &kp LGUI  &trans
+&trans     &kp AT         &kp LS(NUMBER_1)      &kp LS(NUMBER_2)       &kp LS(NUMBER_3)   &kp LS(NUMBER_4)          &trans  &trans     &trans         &kp RALT                  &trans    &trans
+                          &trans                &trans                                                                                 &trans         &trans
+                                                &trans                 &trans             &trans                    &trans  &trans     &trans
+                                                                       &trans             &trans            &trans  &trans
             >;
         };
 
