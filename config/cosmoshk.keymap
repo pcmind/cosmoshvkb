@@ -53,6 +53,11 @@
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <32 33>;
         };
+
+        bluetoothlayer {
+            bindings = <&mo 6>;
+            key-positions = <43 44 45>;
+        };
     };
 
     behaviors {
@@ -92,9 +97,9 @@
             //                            | ENT  | L_1  |                   | LWR  |  GUI  |
 
             bindings = <
-&kp ESC        &kp Q  &kp W         &kp E             &kp R         &kp T             &kp Y        &kp U               &kp I                           &kp O            &kp P          &kp DEL
-&kp BACKSPACE  &kp A  &hrm LALT S   &hrm LCTRL D      &hrm LSHFT F  &kp G             &kp H        &hrm RIGHT_SHIFT J  &hrm RCTRL K                    &hrm LEFT_ALT L  &kp SEMICOLON  &kp BACKSLASH
-&kp LEFT_GUI   &kp Z  &kp X         &kp C             &kp V         &kp B             &kp N        &kp M               &kp COMMA                       &kp DOT          &kp SLASH      &kp RIGHT_GUI
+&kp ESC        &kp Q  &kp W         &kp E             &kp R         &kp T             &kp Y        &kp U               &kp I                           &kp O            &kp P             &kp DEL
+&kp BACKSPACE  &kp A  &hrm LALT S   &hrm LCTRL D      &hrm LSHFT F  &kp G             &kp H        &hrm RIGHT_SHIFT J  &hrm RCTRL K                    &hrm LEFT_ALT L  &kp PT_C_CEDILLA  &kp PT_TILDE
+&kp LEFT_GUI   &kp Z  &kp X         &kp C             &kp V         &kp B             &kp N        &kp M               &kp COMMA                       &kp DOT          &kp SLASH         &kp RIGHT_GUI
                       &kp UP_ARROW  &kp DOWN_ARROW                                                                     &kp LEFT_ARROW                  &kp RIGHT_ARROW
                                     &kp LEFT_CONTROL  &lt 1 SPACE   &lt 3 TAB         &lt 4 ENTER  &lt 2 BACKSPACE     &sfthold LEFT_SHIFT LEFT_SHIFT
                                                       &kp RETURN    &mo 5      &none  &caps_word
@@ -114,12 +119,12 @@
 
         num {
             bindings = <
-&kp ESC  &kp COMMA      &kp N7  &kp N8  &kp N9  &kp FSLH              &trans  &trans     &trans     &trans    &trans    &kp DEL
-&trans   &kp MINUS      &kp N4  &kp N5  &kp N6  &kp PLUS              &trans  &kp RSHFT  &kp RCTRL  &kp LALT  &kp LGUI  &trans
-&trans   &kp LS(EQUAL)  &kp N1  &kp N2  &kp N3  &kp LS(STAR)          &trans  &trans     &trans     &kp RALT  &trans    &trans
-                        &trans  &trans                                                   &trans     &trans
-                                &trans  &kp N0  &kp PERIOD            &trans  &trans     &trans
-                                        &trans  &trans        &trans  &trans
+&kp ESC  &kp COMMA     &kp N7  &kp N8  &kp N9     &kp FSLH              &trans  &trans     &trans     &trans    &trans    &kp DEL
+&trans   &kp PT_MINUS  &kp N4  &kp N5  &kp N6     &kp PT_PLUS           &trans  &kp RSHFT  &kp RCTRL  &kp LALT  &kp LGUI  &trans
+&trans   &kp PT_EQUAL  &kp N1  &kp N2  &kp N3     &kp PT_ASTRK          &trans  &trans     &trans     &kp RALT  &trans    &trans
+                       &trans  &trans                                                      &trans     &trans
+                               &trans  &kp PT_N0  &kp PERIOD            &trans  &trans     &trans
+                                       &trans     &trans        &trans  &trans
             >;
         };
 
@@ -136,12 +141,12 @@
 
         sym {
             bindings = <
-&trans     &kp GRAVE      &kp MINUS             &kp LS(RIGHT_BRACKET)  &kp RIGHT_BRACKET  &kp LS(N7)                &trans  &kp SQT    &kp BACKSLASH  &kp LS(NON_US_BACKSLASH)  &trans    &trans
-&kp RA(E)  &kp LS(GRAVE)  &kp LS(LEFT_BRACKET)  &kp LS(NUMBER_6)       &kp LS(MINUS)      &kp LS(N5)                &trans  &kp LSHFT  &kp RCTRL      &kp LALT                  &kp LGUI  &trans
-&trans     &kp AT         &kp LS(NUMBER_1)      &kp LS(NUMBER_2)       &kp LS(NUMBER_3)   &kp LS(NUMBER_4)          &trans  &trans     &trans         &kp RALT                  &trans    &trans
-                          &trans                &trans                                                                                 &trans         &trans
-                                                &trans                 &trans             &trans                    &trans  &trans     &trans
-                                                                       &trans             &trans            &trans  &trans
+&trans       &kp PT_BSLH  &kp PT_SINGLE_QUOTE  &kp PT_GRAVE          &kp PT_ACUTE     &kp PT_SLASH            &kp PT_ORDM  &kp PT_TILDE  &kp PT_CARET  &kp PT_ORDF  &kp PT_ORDF  &trans
+&kp PT_EURO  &kp PT_PIPE  &kp PT_ASTRK         &kp PT_AMPS           &kp PT_QUESTION  &kp PT_PERCENT          &trans       &kp LSHFT     &kp RCTRL     &kp LALT     &kp LGUI     &trans
+&trans       &kp PT_AT    &kp PT_EXCL          &kp PT_DOUBLE_QUOTES  &kp PT_HASH      &kp PT_DOLLAR           &trans       &trans        &trans        &kp RALT     &trans       &trans
+                          &trans               &trans                                                                                    &trans        &trans
+                                               &trans                &trans           &trans                  &trans       &trans        &trans
+                                                                     &trans           &trans          &trans  &trans
             >;
         };
 
