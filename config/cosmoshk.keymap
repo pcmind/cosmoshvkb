@@ -130,11 +130,11 @@
 
         mouse {
             bindings = <
-&kp ESC  &trans     &trans     &kp LC(E)  &trans     &trans                 &kp LS(LC(Z))  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)        &trans
-&trans   &kp LC(A)  &kp LALT   &kp LCTRL  &kp LSHFT  &trans                 &kp K_MENU     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-&trans   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(Z))          &trans         &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
-                    &trans     &trans                                                                      &trans          &trans
-                               &trans     &trans     &trans                 &mkp MB3       &mkp LCLK       &mkp RCLK
+&kp ESC  &trans     &trans     &kp LC(E)  &trans     &trans                 &kp LS(LC(Z))       &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)        &trans
+&trans   &kp LC(A)  &kp LALT   &kp LCTRL  &kp LSHFT  &trans                 &kp K_CONTEXT_MENU  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
+&trans   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(Z))          &trans              &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+                    &trans     &trans                                                                           &trans          &trans
+                               &trans     &trans     &trans                 &mkp MB3            &mkp LCLK       &mkp RCLK
                                           &trans     &trans         &trans  &trans
             >;
         };
