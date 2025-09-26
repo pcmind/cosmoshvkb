@@ -10,6 +10,50 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        lessthan {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <2 3>;
+        };
+
+        openbrance {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <3 4>;
+        };
+
+        openparent {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <28 27>;
+        };
+
+        openbraket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <26 27>;
+        };
+
+        closebrace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <7 8>;
+        };
+
+        closegreater {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <8 9>;
+        };
+
+        closeparent {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <31 32>;
+        };
+
+        closebrack {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <32 33>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
