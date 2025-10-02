@@ -124,6 +124,23 @@
             #binding-cells = <0>;
             bindings = <&sl 5>, <&mo 5>, <&tog 5>;
         };
+
+        td_hold_tap: td_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TD_HOLD_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
+
+        my_triple_function: my_triple_function {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MY_TRIPLE_FUNCTION";
+            #binding-cells = <0>;
+            bindings = <&td_hold_tap LCTRL ENTER>, <&mo 5>, <&sl 5>;
+        };
     };
 
     keymap {
@@ -139,12 +156,12 @@
             //                            | ENT  | L_1  |                   | LWR  |  GUI  |
 
             bindings = <
-&kp ESC        &kp Q        &kp W         &kp E                   &kp R         &kp T                    &kp Y        &kp U               &kp I                           &kp O            &kp P                   &kp DEL
-&kp BACKSPACE  &hml LWIN A  &hml LALT S   &hml LCTRL D            &hml LSHFT F  &kp G                    &kp H        &hmr RIGHT_SHIFT J  &hmr RCTRL K                    &hmr LEFT_ALT L  &hmr RWIN PT_C_CEDILLA  &kp PT_TILDE
-&kp LEFT_GUI   &kp Z        &kp X         &kp C                   &kp V         &kp B                    &kp N        &kp M               &kp COMMA                       &kp DOT          &kp SLASH               &kp PT_EQUAL
-                            &kp UP_ARROW  &kp DOWN_ARROW                                                                                  &kp LEFT_ARROW                  &kp RIGHT_ARROW
-                                          &mt LEFT_CONTROL ENTER  &lt 1 SPACE   &lt 3 TAB                &lt 4 ENTER  &lt 2 BACKSPACE     &sfthold LEFT_SHIFT LEFT_SHIFT
-                                                                  &kp RETURN    &fun_layer  &key_repeat  &caps_word
+&kp ESC        &kp Q        &kp W         &kp E                &kp R         &kp T                    &kp Y        &kp U               &kp I                           &kp O            &kp P                   &kp DEL
+&kp BACKSPACE  &hml LWIN A  &hml LALT S   &hml LCTRL D         &hml LSHFT F  &kp G                    &kp H        &hmr RIGHT_SHIFT J  &hmr RCTRL K                    &hmr LEFT_ALT L  &hmr RWIN PT_C_CEDILLA  &kp PT_TILDE
+&kp LEFT_GUI   &kp Z        &kp X         &kp C                &kp V         &kp B                    &kp N        &kp M               &kp COMMA                       &kp DOT          &kp SLASH               &kp PT_EQUAL
+                            &kp UP_ARROW  &kp DOWN_ARROW                                                                               &kp LEFT_ARROW                  &kp RIGHT_ARROW
+                                          &my_triple_function  &lt 1 SPACE   &lt 3 TAB                &lt 4 ENTER  &lt 2 BACKSPACE     &sfthold LEFT_SHIFT LEFT_SHIFT
+                                                               &kp RETURN    &fun_layer  &key_repeat  &caps_word
             >;
         };
 
