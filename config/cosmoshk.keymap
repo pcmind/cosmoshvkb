@@ -132,7 +132,8 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
+            hold-trigger-key-positions = <1 2 3 4 5 17 16 15 14 13 25 26 27 28 29>;
         };
 
         my_triple_function: my_triple_function {
