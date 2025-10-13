@@ -136,7 +136,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <170>;
             flavor = "hold-preferred";
             hold-trigger-key-positions = <1 2 3 4 5 17 16 15 14 13 25 26 27 28 29>;
         };
@@ -146,6 +146,8 @@
             label = "MY_TRIPLE_FUNCTION";
             #binding-cells = <0>;
             bindings = <&td_hold_tap LCTRL ENTER>, <&mo 5>, <&sl 5>;
+
+            tapping-term-ms = <170>;
         };
     };
 
