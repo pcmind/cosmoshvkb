@@ -7,5 +7,3 @@ requires: [pro_micro]
 features:
   - keys
   - sudio
-siblings:
-  - unsplithk
