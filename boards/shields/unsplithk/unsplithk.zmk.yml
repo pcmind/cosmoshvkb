@@ -2,8 +2,7 @@ file_format: "1"
 id: unsplithk
 name: Unsplithk
 type: shield
-url: https://github.com/pcmind/cosomoshk
+url: https://github.com/pcmind/cosmoshvkb
 requires: [pro_micro]
 features:
   - keys
-  - sudio
