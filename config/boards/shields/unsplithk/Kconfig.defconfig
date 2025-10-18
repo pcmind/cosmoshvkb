@@ -1,0 +1,6 @@
+if SHIELD_UNSPLITHK
+
+config ZMK_KEYBOARD_NAME
+    default "Unsplithk"
+
+endif
