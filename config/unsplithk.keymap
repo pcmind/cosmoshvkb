@@ -188,10 +188,10 @@
 
         arrows {
             bindings = <
-               &trans        &kp LC(RA(LEFT))  &kp LC(LA(RIGHT))  &trans          &trans           &kp LS(LC(Z))  &kp LC(V)  &kp LC(C)       &kp LC(X)     &kp LC(Z)
-&kp BACKSPACE  &kp LEFT_GUI  &kp LEFT_ALT      &kp LEFT_CONTROL   &kp LEFT_SHIFT  &trans           &kp CLCK       &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp DEL
-               &kp LC(Z)     &kp LC(X)         &kp LC(C)          &kp LC(V)       &kp LC(LS(Z))    &kp INS        &kp HOME   &kp PAGE_DOWN   &kp PAGE_UP   &kp END
-                                               &trans             &trans          &trans           &trans         &trans     &trans
+               &trans        &kp LC(RA(LEFT))  &kp LC(LA(RIGHT))  &trans          &kp LG(LC(LEFT_ARROW))     &kp LS(LC(Z))  &kp LC(V)  &kp LC(C)       &kp LC(X)     &kp LC(Z)
+&kp BACKSPACE  &kp LEFT_GUI  &kp LEFT_ALT      &kp LEFT_CONTROL   &kp LEFT_SHIFT  &kp LG(LC(RIGHT_ARROW))    &kp CLCK       &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp DEL
+               &kp LC(Z)     &kp LC(X)         &kp LC(C)          &kp LC(V)       &kp LC(LS(Z))              &kp INS        &kp HOME   &kp PAGE_DOWN   &kp PAGE_UP   &kp END
+                                               &trans             &trans          &trans                     &trans         &trans     &trans
             >;
         };
 
