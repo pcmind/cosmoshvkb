@@ -1,6 +1,6 @@
 # My Personal Keyboard
 
-![Alt text](case/unsplit/top.jpg)
+![Alt text](case/unsplithk/top.jpg)
 
 A simple un-split 38 key keyboard, v2, designed to have minimal keys form my taste. 
 It is a ZMK basd handwired wireless keyboard. 
