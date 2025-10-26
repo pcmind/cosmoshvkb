@@ -186,12 +186,12 @@
             >;
         };
 
-        arrows {
+        nav {
             bindings = <
-               &trans        &kp LC(RA(LEFT))  &kp LC(LA(RIGHT))  &trans          &kp LG(LC(LEFT_ARROW))     &kp LS(LC(Z))  &kp LC(V)  &kp LC(C)       &kp LC(X)     &kp LC(Z)
-&kp BACKSPACE  &kp LEFT_GUI  &kp LEFT_ALT      &kp LEFT_CONTROL   &kp LEFT_SHIFT  &kp LG(LC(RIGHT_ARROW))    &kp CLCK       &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp DEL
-               &kp LC(Z)     &kp LC(X)         &kp LC(C)          &kp LC(V)       &kp LC(LS(Z))              &kp INS        &kp HOME   &kp PAGE_DOWN   &kp PAGE_UP   &kp END
-                                               &trans             &trans          &trans                     &trans         &trans     &trans
+               &trans        &kp LC(RA(LEFT))  &kp LC(LA(RIGHT))  &trans          &kp LG(LC(LEFT_ARROW))     &kp PRINTSCREEN  &trans    &trans          &trans        &trans
+&kp BACKSPACE  &kp LEFT_GUI  &kp LEFT_ALT      &kp LEFT_CONTROL   &kp LEFT_SHIFT  &kp LG(LC(RIGHT_ARROW))    &kp CLCK         &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp DEL
+               &kp LC(Z)     &kp LC(X)         &kp LC(C)          &kp LC(V)       &kp LC(LS(Z))              &kp INS          &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP   &kp END
+                                               &trans             &trans          &trans                     &trans           &trans    &trans
             >;
         };
 
@@ -224,10 +224,10 @@
 
         fun {
             bindings = <
-        &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &trans  &trans     &trans     &trans    &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp INSERT         &trans  &kp RSHFT  &kp RCTRL  &kp LALT  &kp LGUI  &trans
-        &kp F10  &kp F1  &kp F2  &kp F3  &trans             &trans  &trans     &trans     &trans    &trans
-                         &none   &none   &trans             &trans  &trans     &trans
+        &kp F12        &kp F7            &kp F8                &kp F9              &kp PRINTSCREEN    &kp F13  &kp F14         &kp F15         &kp F16        &kp F17
+&trans  &hml LWIN F11  &hml LEFT_ALT F4  &hml LEFT_CONTROL F5  &hml LEFT_SHIFT F6  &kp INSERT         &kp F19  &hmr RSHFT F20  &hmr RCTRL F21  &hmr RALT F22  &hmr LGUI F23  &trans
+        &kp F10        &kp F1            &kp F2                &kp F3              &trans             &kp F24  &trans          &trans          &trans         &trans
+                                         &none                 &none               &trans             &trans   &trans          &trans
             >;
         };
 
