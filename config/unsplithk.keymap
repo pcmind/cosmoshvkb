@@ -75,6 +75,16 @@
             bindings = <&to 7>;
             key-positions = <10 21>;
         };
+
+        ccedila_til_a {
+            bindings = <&ccedila_a_m>;
+            key-positions = <11 20>;
+        };
+
+        ccedila_til_o {
+            bindings = <&ccedila_o_m>;
+            key-positions = <8 20>;
+        };
     };
 
     behaviors {
@@ -168,6 +178,50 @@
         };
     };
 
+    macros {
+        eq_eq_m: eq_eq_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_EQUAL &kp PT_EQUAL>;
+            label = "EQ_EQ_M";
+        };
+
+        not_eq_m: not_eq_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_EXCL &kp PT_EQUAL>;
+            label = "NOT_EQ_M";
+        };
+
+        jlambda_m: jlambda {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_MINUS &kp PT_GT>;
+            label = "JLAMBDA";
+        };
+
+        eq_gt_m: eq_gt_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_EQUAL &kp PT_GT>;
+            label = "EQ_GT_M";
+        };
+
+        ccedila_o_m: ccedila_o_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_C_CEDILLA &kp PT_TILDE &kp O>;
+            label = "CCEDILA_O_M";
+        };
+
+        ccedila_a_m: ccedila_a_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_C_CEDILLA &kp PT_TILDE &kp A>;
+            label = "CCEDILA_A_M";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -246,6 +300,15 @@
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
        &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
                      &none  &none  &none    &none  &none  &none
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &ccedila_a_m  &ccedila_o_m  &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &not_eq_m     &eq_eq_m      &jlambda_m  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans      &trans
+                        &trans  &trans  &trans    &trans  &trans        &trans
             >;
         };
     };
