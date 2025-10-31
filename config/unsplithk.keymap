@@ -278,9 +278,9 @@
 
         fun {
             bindings = <
-        &kp F12        &kp F7            &kp F8                &kp F9              &kp PRINTSCREEN    &kp F13  &kp F14         &kp F15         &kp F16        &kp F17
-&trans  &hml LWIN F11  &hml LEFT_ALT F4  &hml LEFT_CONTROL F5  &hml LEFT_SHIFT F6  &kp INSERT         &kp F19  &hmr RSHFT F20  &hmr RCTRL F21  &hmr RALT F22  &hmr LGUI F23  &trans
-        &kp F10        &kp F1            &kp F2                &kp F3              &trans             &kp F24  &trans          &trans          &trans         &trans
+        &kp F12        &kp F7            &kp F8                &kp F9              &kp PRINTSCREEN    &kp F13  &kp F14         &kp F15         &kp F16            &kp F17
+&trans  &hml LWIN F11  &hml LEFT_ALT F4  &hml LEFT_CONTROL F5  &hml LEFT_SHIFT F6  &kp INSERT         &kp F19  &hmr RSHFT F20  &hmr RCTRL F21  &hmr LEFT_ALT F22  &hmr LGUI F23  &trans
+        &kp F10        &kp F1            &kp F2                &kp F3              &trans             &kp F24  &trans          &trans          &trans             &trans
                                          &none                 &none               &trans             &trans   &trans          &trans
             >;
         };
