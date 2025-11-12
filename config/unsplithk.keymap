@@ -224,14 +224,14 @@
         ccedila_o_m: ccedila_o_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_C_CEDILLA &kp PT_TILDE &kp O>;
+            bindings = <&kp PT_C_CEDILLA &kp PT_TILDE &kp PT_O &kp PT_E &kp PT_S>;
             label = "CCEDILA_O_M";
         };
 
         ccedila_a_m: ccedila_a_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_C_CEDILLA &kp PT_TILDE &kp A>;
+            bindings = <&kp PT_C_CEDILLA &kp PT_TILDE &kp PT_A &kp PT_O>;
             label = "CCEDILA_A_M";
         };
 
