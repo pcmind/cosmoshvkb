@@ -234,6 +234,41 @@
             bindings = <&kp PT_C_CEDILLA &kp PT_TILDE &kp A>;
             label = "CCEDILA_A_M";
         };
+
+        a_tilde_m: a_till_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_TILDE &kp PT_A>;
+            label = "A_TILL_M";
+        };
+
+        o_tilde_m: o_tilde_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_TILDE &kp PT_O>;
+            label = "O_TILDE_M";
+        };
+
+        gt_eq_m: qt_eq_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_GT &kp PT_EQUAL>;
+            label = "QT_EQ_M";
+        };
+
+        lt_eq_m: lt_eq_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_LT &kp PT_EQUAL>;
+            label = "LT_EQ_M";
+        };
+
+        tilde_slash_m: tilde_slash_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_TILDE &kp PT_SLASH>;
+            label = "TILDE_SLASH_M";
+        };
     };
 
     keymap {
@@ -301,7 +336,7 @@
 
         bluetooth {
             bindings = <
-        &bt BT_CLR_ALL  &trans        &trans        &bt BT_PRV    &bt BT_NXT      &trans     &trans  &trans  &trans  &trans
+        &bt BT_CLR_ALL  &bt BT_CLR    &trans        &bt BT_PRV    &bt BT_NXT      &trans     &trans  &trans  &trans  &trans
 &trans  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans     &trans  &trans  &trans  &trans  &trans
         &out OUT_TOG    &trans        &trans        &trans        &trans          &soft_off  &trans  &trans  &trans  &trans
                                       &trans        &trans        &trans          &trans     &trans  &trans
@@ -319,10 +354,10 @@
 
         combos {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &ccedila_a_m  &ccedila_o_m  &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &not_eq_m     &eq_eq_m      &jlambda_m  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans      &trans
-                        &trans  &trans  &trans    &trans  &trans        &trans
+        &trans      &trans  &trans  &trans  &trans    &trans          &ccedila_a_m  &ccedila_o_m  &o_tilde_m  &trans
+&trans  &a_tilde_m  &trans  &trans  &trans  &trans    &tilde_slash_m  &not_eq_m     &eq_eq_m      &jlambda_m  &eq_gt_m  &trans
+        &trans      &trans  &trans  &none   &trans    &trans          &none         &lt_eq_m      &gt_eq_m    &trans
+                            &trans  &trans  &trans    &trans          &trans        &trans
             >;
         };
     };
