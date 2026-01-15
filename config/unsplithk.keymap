@@ -85,6 +85,11 @@
             bindings = <&ccedila_o_m>;
             key-positions = <8 20>;
         };
+
+        til_a_o_combo {
+            bindings = <&til_a_o_m>;
+            key-positions = <11 8>;
+        };
     };
 
     behaviors {
@@ -268,6 +273,13 @@
             #binding-cells = <0>;
             bindings = <&kp PT_TILDE &kp PT_SLASH>;
             label = "TILDE_SLASH_M";
+        };
+
+        til_a_o_m: til_a_o_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_TILDE &kp PT_A &kp PT_O>;
+            label = "TIL_A_O_M";
         };
     };
 
