@@ -200,9 +200,20 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MY_SHIFT";
             #binding-cells = <0>;
-            bindings = <&sfthold LEFT_SHIFT LEFT_SHIFT>, <&caps_word>;
+            bindings = <&shift_hold2 LEFT_SHIFT LEFT_SHIFT>, <&caps_word>;
 
-            tapping-term-ms = <170>;
+            tapping-term-ms = <250>;
+        };
+
+        shift_hold2: shift_hold2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_HOLD2";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
         };
     };
 
