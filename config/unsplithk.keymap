@@ -200,6 +200,24 @@
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        ss_cw: ss_cw {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SS_CW";
+            bindings = <&sk LEFT_SHIFT>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        shift_all: shift_all {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_ALL";
+            bindings = <&kp>, <&ss_cw>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -278,10 +296,10 @@
             //                     | CTRL | SPC  | MOUS |                   | RSE  |  ENT  |  SPC  |
 
             bindings = <
-         &kp Q        &kp W        &kp E               &kp R                 &kp T                  &kp Y                 &kp U                     &kp I         &kp O            &kp P
-&kp ESC  &hml LWIN A  &hml LALT S  &hml LCTRL D        &hml LSHFT F          &kp G                  &kp H                 &hmr RIGHT_SHIFT J        &hmr RCTRL K  &hmr LEFT_ALT L  &hmr LEFT_GUI PT_C_CEDILLA  &kp DEL
-         &kp Z        &kp X        &kp C               &lrow_layer_to 8 V    &kp B                  &kp N                 &kp M                     &kp COMMA     &kp DOT          &kp SLASH
-                                   &lt_k_repeat 5 TAB  &lt_k_repeat 1 SPACE  &my_triple_function    &lt_k_repeat 4 ENTER  &lt_k_repeat 2 BACKSPACE  &my_shift
+         &kp Q        &kp W        &kp E               &kp R                 &kp T                  &kp Y                 &kp U                     &kp I                    &kp O            &kp P
+&kp ESC  &hml LWIN A  &hml LALT S  &hml LCTRL D        &hml LSHFT F          &kp G                  &kp H                 &hmr RIGHT_SHIFT J        &hmr RCTRL K             &hmr LEFT_ALT L  &hmr LEFT_GUI PT_C_CEDILLA  &kp DEL
+         &kp Z        &kp X        &kp C               &lrow_layer_to 8 V    &kp B                  &kp N                 &kp M                     &kp COMMA                &kp DOT          &kp SLASH
+                                   &lt_k_repeat 5 TAB  &lt_k_repeat 1 SPACE  &my_triple_function    &lt_k_repeat 4 ENTER  &lt_k_repeat 2 BACKSPACE  &shift_all LEFT_SHIFT 0
             >;
         };
 
