@@ -280,7 +280,7 @@
         tilde_slash_m: tilde_slash_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_TILDE &kp PT_SLASH>;
+            bindings = <&kp PT_TILDE &kp PT_SPACE &kp PT_SLASH>;
             label = "TILDE_SLASH_M";
         };
 
