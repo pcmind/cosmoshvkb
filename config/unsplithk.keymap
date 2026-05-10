@@ -187,7 +187,7 @@
             #binding-cells = <0>;
             bindings = <&shift_hold2 LEFT_SHIFT LEFT_SHIFT>, <&caps_word>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <175>;
         };
 
         shift_hold2: shift_hold2 {
