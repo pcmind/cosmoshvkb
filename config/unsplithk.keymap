@@ -75,21 +75,6 @@
             bindings = <&to 7>;
             key-positions = <10 21>;
         };
-
-        ccedila_til_a {
-            bindings = <&ccedila_a_m>;
-            key-positions = <11 20>;
-        };
-
-        ccedila_til_o {
-            bindings = <&ccedila_o_m>;
-            key-positions = <8 20>;
-        };
-
-        til_a_o_combo {
-            bindings = <&til_a_o_m>;
-            key-positions = <11 8>;
-        };
     };
 
     behaviors {
@@ -246,20 +231,6 @@
             label = "EQ_GT_M";
         };
 
-        ccedila_o_m: ccedila_o_m {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp PT_C_CEDILLA &kp PT_TILDE &kp PT_O &kp PT_E &kp PT_S>;
-            label = "CCEDILA_O_M";
-        };
-
-        ccedila_a_m: ccedila_a_m {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp PT_C_CEDILLA &kp PT_TILDE &kp PT_A &kp PT_O>;
-            label = "CCEDILA_A_M";
-        };
-
         a_tilde_m: a_till_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -293,13 +264,6 @@
             #binding-cells = <0>;
             bindings = <&kp PT_TILDE &kp PT_SPACE &kp PT_SLASH>;
             label = "TILDE_SLASH_M";
-        };
-
-        til_a_o_m: til_a_o_m {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp PT_TILDE &kp PT_A &kp PT_O>;
-            label = "TIL_A_O_M";
         };
     };
 
@@ -386,10 +350,10 @@
 
         combos {
             bindings = <
-        &trans      &trans  &trans  &trans  &trans    &trans          &ccedila_a_m  &ccedila_o_m  &o_tilde_m  &trans
-&trans  &a_tilde_m  &trans  &trans  &trans  &trans    &tilde_slash_m  &not_eq_m     &eq_eq_m      &jlambda_m  &eq_gt_m  &trans
-        &trans      &trans  &trans  &none   &trans    &trans          &none         &lt_eq_m      &gt_eq_m    &trans
-                            &trans  &trans  &trans    &trans          &trans        &trans
+        &trans      &trans  &trans  &trans  &trans    &trans          &trans     &trans    &o_tilde_m  &trans
+&trans  &a_tilde_m  &trans  &trans  &trans  &trans    &tilde_slash_m  &not_eq_m  &eq_eq_m  &jlambda_m  &eq_gt_m  &trans
+        &trans      &trans  &trans  &none   &trans    &trans          &none      &lt_eq_m  &gt_eq_m    &trans
+                            &trans  &trans  &trans    &trans          &trans     &trans
             >;
         };
     };
