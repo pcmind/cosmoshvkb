@@ -154,7 +154,7 @@
         ss_cw: ss_cw {
             compatible = "zmk,behavior-mod-morph";
             label = "SS_CW";
-            bindings = <&sk LEFT_SHIFT>, <&cw_toggle>;
+            bindings = <&sk LEFT_SHIFT>, <&caps_word>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -167,15 +167,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
-
-        cw_toggle: cw_toggle {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CW_TOGGLE";
-            bindings = <&caps_word>, <&kp K_CANCEL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
         };
     };
 
@@ -271,10 +262,10 @@
 
         nav {
             bindings = <
-               &trans        &kp LC(RA(LEFT))  &kp LC(LA(RIGHT))  &trans          &kp LG(LC(LEFT_ARROW))     &kp PRINTSCREEN  &trans    &trans          &trans        &trans
-&kp BACKSPACE  &kp LEFT_GUI  &kp LEFT_ALT      &kp LEFT_CONTROL   &kp LEFT_SHIFT  &kp LG(LC(RIGHT_ARROW))    &kp CLCK         &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp DEL
-               &kp LC(Z)     &kp LC(X)         &kp LC(C)          &kp LC(V)       &kp LC(LS(Z))              &kp INS          &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP   &kp END
-                                               &trans             &trans          &trans                     &trans           &trans    &trans
+               &trans        &kp LC(RA(LEFT))  &kp LC(LA(RIGHT))  &trans          &kp LG(LC(LEFT_ARROW))     &kp K_CANCEL  &trans    &trans          &trans        &trans
+&kp BACKSPACE  &kp LEFT_GUI  &kp LEFT_ALT      &kp LEFT_CONTROL   &kp LEFT_SHIFT  &kp LG(LC(RIGHT_ARROW))    &kp CLCK      &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp DEL
+               &kp LC(Z)     &kp LC(X)         &kp LC(C)          &kp LC(V)       &kp LC(LS(Z))              &kp INS       &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP   &kp END
+                                               &trans             &trans          &trans                     &trans        &trans    &trans
             >;
         };
 
