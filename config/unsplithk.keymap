@@ -154,7 +154,7 @@
         ss_cw: ss_cw {
             compatible = "zmk,behavior-mod-morph";
             label = "SS_CW";
-            bindings = <&sk LEFT_SHIFT>, <&tg_cw>;
+            bindings = <&sk LEFT_SHIFT>, <&cw_toggle>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -167,6 +167,15 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+        };
+
+        cw_toggle: cw_toggle {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CW_TOGGLE";
+            bindings = <&caps_word>, <&kp K_CANCEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
@@ -234,11 +243,11 @@
             label = "TILDE_SLASH_M";
         };
 
-        tg_cw: tg_cw {
+        mc_cancel: mc_cancel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&caps_word>;
-            label = "TG_CW";
+            bindings = <&kp K_CANCEL>;
+            label = "MC_CANCEL";
         };
     };
 
