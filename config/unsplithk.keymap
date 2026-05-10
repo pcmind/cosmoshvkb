@@ -154,7 +154,7 @@
         ss_cw: ss_cw {
             compatible = "zmk,behavior-mod-morph";
             label = "SS_CW";
-            bindings = <&sk LEFT_SHIFT>, <&caps_word>;
+            bindings = <&sk LEFT_SHIFT>, <&tg_cw>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -232,6 +232,13 @@
             #binding-cells = <0>;
             bindings = <&kp PT_TILDE &kp PT_SPACE &kp PT_SLASH>;
             label = "TILDE_SLASH_M";
+        };
+
+        tg_cw: tg_cw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&caps_word>;
+            label = "TG_CW";
         };
     };
 
