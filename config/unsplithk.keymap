@@ -8,8 +8,24 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // Faster mouse pointer speed
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // Faster scrolling speed
+
 #include <dt-bindings/zmk/pointing.h>
 #include "keys_pt.h"
+
+&mmv {
+    acceleration-exponent = <1>;      // 1: uniform acceleration
+    time-to-max-speed-ms = <300>;     // reach max speed in 300ms instead of 500ms
+    delay-ms = <0>;                   // zero delay on press
+};
+
+&msc {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <300>;
+    delay-ms = <0>;
+};
 
 / {
     // -------------------unsplithk---------------------------------------
