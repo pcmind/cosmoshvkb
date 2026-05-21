@@ -194,6 +194,8 @@
         eq_eq_m: eq_eq_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <15>;
+            tap-ms = <15>;
             bindings = <&kp PT_EQUAL &kp PT_EQUAL>;
             label = "EQ_EQ_M";
         };
@@ -201,6 +203,8 @@
         not_eq_m: not_eq_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <15>;
+            tap-ms = <15>;
             bindings = <&kp PT_EXCL &kp PT_EQUAL>;
             label = "NOT_EQ_M";
         };
@@ -208,6 +212,8 @@
         jlambda_m: jlambda {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <15>;
+            tap-ms = <15>;
             bindings = <&kp PT_MINUS &kp PT_GT>;
             label = "JLAMBDA";
         };
@@ -215,6 +221,8 @@
         eq_gt_m: eq_gt_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <15>;
+            tap-ms = <15>;
             bindings = <&kp PT_EQUAL &kp PT_GT>;
             label = "EQ_GT_M";
         };
@@ -222,6 +230,8 @@
         a_tilde_m: a_till_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <15>;
+            tap-ms = <15>;
             bindings = <&kp PT_TILDE &kp PT_A>;
             label = "A_TILL_M";
         };
@@ -229,6 +239,8 @@
         o_tilde_m: o_tilde_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <15>;
+            tap-ms = <15>;
             bindings = <&kp PT_TILDE &kp PT_O>;
             label = "O_TILDE_M";
         };
@@ -236,6 +248,8 @@
         gt_eq_m: qt_eq_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <15>;
+            tap-ms = <15>;
             bindings = <&kp PT_GT &kp PT_EQUAL>;
             label = "QT_EQ_M";
         };
@@ -243,6 +257,8 @@
         lt_eq_m: lt_eq_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <15>;
+            tap-ms = <15>;
             bindings = <&kp PT_LT &kp PT_EQUAL>;
             label = "LT_EQ_M";
         };
@@ -250,6 +266,8 @@
         tilde_slash_m: tilde_slash_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <15>;
+            tap-ms = <15>;
             bindings = <&kp PT_TILDE &kp PT_SPACE &kp PT_SLASH>;
             label = "TILDE_SLASH_M";
         };
