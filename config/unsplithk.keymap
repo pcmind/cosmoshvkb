@@ -15,6 +15,10 @@
 #include <dt-bindings/zmk/pointing.h>
 #include "keys_pt.h"
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BACKSPACE DEL PT_C_CEDILLA PT_TILDE PT_ACUTE PT_GRAVE PT_CARET>;
+};
+
 &mmv {
     acceleration-exponent = <1>;      // 1: uniform acceleration
     time-to-max-speed-ms = <300>;     // reach max speed in 300ms instead of 500ms
