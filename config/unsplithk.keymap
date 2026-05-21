@@ -361,7 +361,7 @@
             >;
         };
 
-        combos {
+        macro_l {
             bindings = <
         &trans      &trans  &trans  &trans  &trans    &trans          &trans     &trans    &o_tilde_m  &trans
 &trans  &a_tilde_m  &trans  &trans  &trans  &trans    &tilde_slash_m  &not_eq_m  &eq_eq_m  &jlambda_m  &eq_gt_m  &trans
