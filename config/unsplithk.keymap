@@ -86,14 +86,17 @@
             key-positions = <35 36 37>;
         };
 
-        mouse_func {
-            bindings = <&mo 3>;
-            key-positions = <33 36>;
-        };
-
         none_layer {
             bindings = <&to 7>;
             key-positions = <10 21>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 
