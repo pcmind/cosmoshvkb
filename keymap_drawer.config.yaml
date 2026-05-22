@@ -104,6 +104,10 @@ parse_config:
     "&td_dot_colon": {t: ".", s: ":"}
     "&td_minus_under": {t: "-", s: "_"}
 
+    # --- Sticky Modifiers ---
+    "&sk LC(LSHFT)": "Ctrl+Shift"
+    "&sk LC(LALT)": "Ctrl+Alt"
+
     # --- Custom Hold-Taps (Layer Activations & Comfort Keys) ---
     "&lt_k_repeat 5 TAB": {t: "TAB", h: "FUN"}
     "&lt_k_repeat 1 SPACE": {t: "SPC", h: "NAV"}

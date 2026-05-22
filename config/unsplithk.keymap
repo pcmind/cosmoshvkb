@@ -87,6 +87,26 @@
             bindings = <&to 7>;
             key-positions = <10 21>;
         };
+
+        left_ctrl_shift {
+            bindings = <&sk LC(LSHFT)>;
+            key-positions = <13 14>;
+        };
+
+        right_ctrl_shift {
+            bindings = <&sk LC(LSHFT)>;
+            key-positions = <17 18>;
+        };
+
+        left_ctrl_alt {
+            bindings = <&sk LC(LALT)>;
+            key-positions = <12 13>;
+        };
+
+        right_ctrl_alt {
+            bindings = <&sk LC(LALT)>;
+            key-positions = <18 19>;
+        };
     };
 
     conditional_layers {
