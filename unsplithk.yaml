@@ -41,10 +41,10 @@ layers:
   - {t: '0', h: SFT}
   nav:
   - {t: ▽, type: trans}
-  - LC(RA(LEFT))
-  - LC(LA(RIGHT))
+  - Ctl+AltGr+LEFT
+  - Ctl+Alt+RIGHT
   - {t: ▽, type: trans}
-  - LG(LC(LEFT ARROW))
+  - Gui+Ctl+LEFT ARROW
   - CANCEL
   - REPEAT
   - {t: ▽, type: trans}
@@ -55,18 +55,18 @@ layers:
   - LEFT ALT
   - LEFT CONTROL
   - LEFT SHIFT
-  - LG(LC(RIGHT ARROW))
+  - Gui+Ctl+RIGHT ARROW
   - CLCK
   - LEFT
   - DOWN ARROW
   - UP ARROW
   - RIGHT
   - DEL
-  - LC(Z)
-  - LC(X)
-  - LC(C)
-  - LC(V)
-  - LC(LS(Z))
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - Ctl+Sft+Z
   - INS
   - HOME
   - PAGE DOWN
@@ -120,7 +120,7 @@ layers:
   mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LC(E)
+  - Ctl+E
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -129,7 +129,7 @@ layers:
   - Right Click
   - {t: ▽, type: trans}
   - ESC
-  - LC(A)
+  - Ctl+A
   - LALT
   - LCTRL
   - LSHFT
@@ -140,11 +140,11 @@ layers:
   - Mouse Up
   - Mouse Right
   - {t: ▽, type: trans}
-  - LC(Z)
-  - LC(X)
-  - LC(C)
-  - LC(V)
-  - LS(LC(Z))
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - Sft+Ctl+Z
   - {t: ▽, type: trans}
   - Scroll Left
   - Scroll Down
