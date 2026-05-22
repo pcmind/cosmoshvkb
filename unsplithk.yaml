@@ -21,32 +21,32 @@ layers:
   - {t: J, h: RIGHT SHIFT}
   - {t: K, h: RCTRL}
   - {t: L, h: LEFT ALT}
-  - '&hmr LEFT_GUI (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON))'
+  - {t: Ç, h: GUI}
   - DEL
   - Z
   - X
   - C
-  - {t: V, h: macro_l}
+  - {t: V, h: MAC}
   - B
   - N
   - M
-  - '&td_comma_semi'
-  - '&td_dot_colon'
-  - '&td_minus_under'
-  - {t: TAB, h: fun}
-  - {t: SPACE, h: nav}
-  - '&my_triple_function'
-  - {t: ENTER, h: sym}
-  - {t: BACKSPACE, h: num}
-  - {t: LEFT SHIFT, h: LEFT SHIFT, s: '&caps_word'}
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - {t: '-', s: _}
+  - {t: TAB, h: FUN}
+  - {t: SPC, h: NAV}
+  - {t: ENT, h: CTL}
+  - {t: ENT, h: SYM}
+  - {t: BSP, h: NUM}
+  - {t: '0', h: SFT}
   nav:
   - {t: ▽, type: trans}
-  - Ctl+AltGr+LEFT
-  - Ctl+Alt+RIGHT
+  - LC(RA(LEFT))
+  - LC(LA(RIGHT))
   - {t: ▽, type: trans}
-  - Gui+Ctl+LEFT ARROW
+  - LG(LC(LEFT ARROW))
   - CANCEL
-  - '&key_repeat'
+  - REPEAT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -55,25 +55,25 @@ layers:
   - LEFT ALT
   - LEFT CONTROL
   - LEFT SHIFT
-  - Gui+Ctl+RIGHT ARROW
+  - LG(LC(RIGHT ARROW))
   - CLCK
   - LEFT
   - DOWN ARROW
   - UP ARROW
   - RIGHT
   - DEL
-  - Ctl+Z
-  - Ctl+X
-  - Ctl+C
-  - Ctl+V
-  - Ctl+Sft+Z
+  - LC(Z)
+  - LC(X)
+  - LC(C)
+  - LC(V)
+  - LC(LS(Z))
   - INS
   - HOME
   - PAGE DOWN
   - PAGE UP
   - END
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -83,29 +83,29 @@ layers:
   - '7'
   - '8'
   - '9'
-  - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 7 AND AMPERSAND))))
+  - /
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
+  - '-'
   - '4'
   - '5'
   - '6'
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD LEFT BRACKET AND LEFT BRACE))
+  - +
   - {t: ▽, type: trans}
   - RSHFT
   - RCTRL
   - LALT
   - LGUI
   - {t: ▽, type: trans}
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 0 AND RIGHT PARENTHESIS)))
+  - '='
   - '1'
   - '2'
   - '3'
-  - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD LEFT BRACKET AND LEFT BRACE))))
+  - '*'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -115,75 +115,75 @@ layers:
   - '0'
   - .
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+E
+  - LC(E)
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp MB3'
-  - '&mkp LCLK'
-  - '&mkp RCLK'
+  - Middle Click
+  - Left Click
+  - Right Click
   - {t: ▽, type: trans}
   - ESC
-  - Ctl+A
+  - LC(A)
   - LALT
   - LCTRL
   - LSHFT
   - {t: ▽, type: trans}
   - CONTEXT MENU
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_UP'
-  - '&mmv MOVE_RIGHT'
+  - Mouse Left
+  - Mouse Down
+  - Mouse Up
+  - Mouse Right
   - {t: ▽, type: trans}
-  - Ctl+Z
-  - Ctl+X
-  - Ctl+C
-  - Ctl+V
-  - Sft+Ctl+Z
+  - LC(Z)
+  - LC(X)
+  - LC(C)
+  - LC(V)
+  - LS(LC(Z))
   - {t: ▽, type: trans}
-  - '&msc SCRL_LEFT'
-  - '&msc SCRL_DOWN'
-  - '&msc SCRL_UP'
-  - '&msc SCRL_RIGHT'
-  - {t: ▽, type: trans}
-  - {type: held}
+  - Scroll Left
+  - Scroll Down
+  - Scroll Up
+  - Scroll Right
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   sym:
-  - ((ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD GRAVE ACCENT AND TILDE)))
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD MINUS AND UNDERSCORE))
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD RIGHT BRACKET AND RIGHT BRACE)))
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD RIGHT BRACKET AND RIGHT BRACE))
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 7 AND AMPERSAND)))
-  - ((ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD APOSTROPHE AND QUOTE)))
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD BACKSLASH AND PIPE))
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD BACKSLASH AND PIPE)))
-  - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD APOSTROPHE AND QUOTE))))
-  - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD APOSTROPHE AND QUOTE))))
-  - (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 5 AND PERCENT)))
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD GRAVE ACCENT AND TILDE)))
-  - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD LEFT BRACKET AND LEFT BRACE))))
-  - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 6 AND CARET))))
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD MINUS AND UNDERSCORE)))
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 5 AND PERCENT)))
+  - \
+  - ''''
+  - '`'
+  - ´
+  - /
+  - º
+  - '~'
+  - ^
+  - ª
+  - ª
+  - €
+  - '|'
+  - '*'
+  - '&'
+  - '?'
+  - '%'
   - {t: ▽, type: trans}
   - LSHFT
   - RCTRL
   - LALT
   - LGUI
   - {t: ▽, type: trans}
-  - ((RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 2 AND AT))))
-  - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 1 AND EXCLAMATION))))
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 2 AND AT)))
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 3 AND HASH)))
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 4 AND DOLLAR)))
+  - '@'
+  - '!'
+  - '"'
+  - '#'
+  - $
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -192,7 +192,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   fun:
@@ -228,7 +228,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - ''
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -283,29 +283,29 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&o_tilde_m'
+  - õ
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&a_tilde_m'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&tilde_slash_m'
-  - '&not_eq_m'
-  - '&eq_eq_m'
-  - '&jlambda_m'
-  - '&eq_gt_m'
+  - ã
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - ~/
+  - '!='
+  - ==
+  - ->
+  - =>
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - '&lt_eq_m'
-  - '&gt_eq_m'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - <=
+  - '>='
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -315,21 +315,21 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [1, 2]
-  k: (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD NON US BACKSLASH AND PIPE))
+  k: <
 - p: [2, 3]
-  k: (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 7 AND AMPERSAND)))
+  k: '{'
 - p: [24, 25]
-  k: (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 8 AND ASTERISK)))
+  k: (
 - p: [23, 24]
-  k: (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 8 AND ASTERISK)))
+  k: '['
 - p: [6, 7]
-  k: (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 0 AND RIGHT PARENTHESIS)))
+  k: '}'
 - p: [7, 8]
-  k: (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD NON US BACKSLASH AND PIPE)))
+  k: '>'
 - p: [28, 29]
-  k: (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 9 AND LEFT PARENTHESIS)))
+  k: )
 - p: [29, 30]
-  k: (RA(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 9 AND LEFT PARENTHESIS)))
+  k: ']'
 - p: [35, 36, 37]
   k: bluetooth
 - p: [10, 21]

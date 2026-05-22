@@ -19,21 +19,24 @@ jobs:
 
       - name: Parse keymap
         run: |
-          keymap parse -z config/unsplithk.keymap > unsplithk.yaml
+          keymap -c keymap_drawer.config.yaml parse -z config/unsplithk.keymap > unsplithk.yaml
 
       - name: Fix custom physical layout
         run: |
           python3 -c "
           with open('unsplithk.yaml', 'r') as f:
               content = f.read()
-          content = content.replace('zmk_keyboard: unsplithk', 'cols_thumbs_notation: \"133333+3 3+333331\"')
+          if 'layout:' not in content:
+              content = 'layout: {cols_thumbs_notation: \"133333+3 3+333331\"}\n' + content
+          else:
+              content = content.replace('zmk_keyboard: unsplithk', 'cols_thumbs_notation: \"133333+3 3+333331\"')
           with open('unsplithk.yaml', 'w') as f:
               f.write(content)
           "
 
       - name: Draw keymap
         run: |
-          keymap draw unsplithk.yaml > unsplithk.svg
+          keymap -c keymap_drawer.config.yaml draw unsplithk.yaml > unsplithk.svg
 
       - name: Commit and Push SVG
         run: |
