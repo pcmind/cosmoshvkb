@@ -26,121 +26,14 @@ Powered by [ZMK Firmware](https://zmk.dev/) running on a `nice_nano_v2` controll
 
 ---
 
-## 🗺️ Keymap Layer Designs
+## 🧠 Layout Philosophy & Design Choices
 
-Click on each layer below to expand the beautifully aligned and perfectly symmetrical physical keymap layout.
+This custom 38-key layout is structured around a specific philosophy tailored for software engineering, intensive IDE utilization, and bilingual writing:
 
-<details>
-<summary><b>⌨️ Layer 0: Default Layer</b></summary>
-
-```text
-           ┌───────┬───────┬───────┬───────┬───────┐       ┌───────┬───────┬───────┬───────┬───────┐
-           │   Q   │   W   │   E   │   R   │   T   │       │   Y   │   U   │   I   │   O   │   P   │
-   ┌───────┼───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┼───────┐
-   │  ESC  │ A/WIN │ S/ALT │ D/CTL │ F/SFT │   G   │       │   H   │ J/SFT │ K/CTL │ L/ALT │ Ç/GUI │  DEL  │
-   └───────┼───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┼───────┘
-           │   Z   │   X   │   C   │ V/MAC │   B   │       │   N   │   M   │  , / ;│  . / :│  - / _│
-           └───────┴───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┴───────┴───────┘
-                           │TAB/FUN│SPC/NAV│ENT/CTL│       │ENT/SYM│BSP/NUM│0/SHFT │
-                           └───────┴───────┴───────┘       └───────┴───────┴───────┘
-```
-</details>
-
-<details>
-<summary><b>🧭 Layer 1: Nav Layer (Navigation & Media)</b></summary>
-
-```text
-           ┌───────┬───────┬───────┬───────┬───────┐       ┌───────┬───────┬───────┬───────┬───────┐
-           │ trans │PrevApp│NextApp│ trans │ WinL  │       │Cancel │REPEAT │ trans │ trans │ trans │
-   ┌───────┼───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┼───────┐
-   │  BSP  │  GUI  │  ALT  │ LCTRL │ LSHFT │ WinR  │       │ Caps  │ LEFT  │ DOWN  │  UP   │ RIGHT │  DEL  │
-   └───────┼───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┼───────┘
-           │ Undo  │  Cut  │ Copy  │ Paste │ Redo  │       │ Insert│ Home  │ PgDn  │ PgUp  │  End  │
-           └───────┴───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┴───────┴───────┘
-                           │ trans │ trans │ trans │       │ trans │ trans │ trans │
-                           └───────┴───────┴───────┘       └───────┴───────┴───────┘
-```
-</details>
-
-<details>
-<summary><b>🔢 Layer 2: Num Layer (Numpad)</b></summary>
-
-```text
-           ┌───────┬───────┬───────┬───────┬───────┐       ┌───────┬───────┬───────┬───────┬───────┐
-           │   ,   │   7   │   8   │   9   │   /   │       │ trans │ trans │ trans │ trans │ trans │
-   ┌───────┼───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┼───────┐
-   │ trans │   -   │   4   │   5   │   6   │   +   │       │ trans │ RSHFT │ RCTRL │ LALT  │ LGUI  │ trans │
-   └───────┼───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┼───────┘
-           │   =   │   1   │   2   │   3   │   *   │       │ trans │ trans │ trans │ RALT  │ trans │
-           └───────┴───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┴───────┴───────┘
-                           │ trans │   0   │   .   │       │ trans │ trans │ trans │
-                           └───────┴───────┴───────┘       └───────┴───────┴───────┘
-```
-</details>
-
-<details>
-<summary><b>🖱️ Layer 3: Mouse Layer</b></summary>
-
-```text
-           ┌───────┬───────┬───────┬───────┬───────┐       ┌───────┬───────┬───────┬───────┬───────┐
-           │ trans │ trans │Ctrl+E │ trans │ trans │       │ trans │  MB3  │ LCLK  │ RCLK  │ trans │
-   ┌───────┼───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┼───────┐
-   │  ESC  │Ctrl+A │ LALT  │ LCTRL │ LSHFT │ trans │       │ Menu  │MsLeft │MsDown │ MsUp  │MsRight│ trans │
-   └───────┼───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┼───────┘
-           │Ctrl+Z │Ctrl+X │Ctrl+C │Ctrl+V │C+S+Z  │       │ trans │ScLeft │ScDown │ ScUp  │ScRight│
-           └───────┴───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┴───────┴───────┘
-                           │ trans │ trans │ trans │       │ trans │ trans │ trans │
-                           └───────┴───────┴───────┘       └───────┴───────┴───────┘
-```
-</details>
-
-<details>
-<summary><b>🎭 Layer 4: Sym Layer (Special Symbols)</b></summary>
-
-```text
-           ┌───────┬───────┬───────┬───────┬───────┐       ┌───────┬───────┬───────┬───────┬───────┐
-           │   \   │   '   │   `   │   ´   │   /   │       │   º   │   ~   │   ^   │   ª   │   ª   │
-   ┌───────┼───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┼───────┐
-   │   €   │   |   │   *   │   &   │   ?   │   %   │       │ trans │ LSHFT │ RCTRL │ LALT  │ LGUI  │ trans │
-   └───────┼───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┼───────┘
-           │   @   │   !   │   "   │   #   │   $   │       │ trans │ trans │ trans │ RALT  │ trans │
-           └───────┴───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┴───────┴───────┘
-                           │ trans │ trans │ trans │       │ trans │ trans │ trans │
-                           └───────┴───────┴───────┘       └───────┴───────┴───────┘
-```
-</details>
-
-<details>
-<summary><b>⚙️ Layer 5: Fun Layer (F1-F24 Keys)</b></summary>
-
-```text
-           ┌───────┬───────┬───────┬───────┬───────┐       ┌───────┬───────┬───────┬───────┬───────┐
-           │  F12  │  F7   │  F8   │  F9   │ PRTSc │       │  F13  │  F14  │  F15  │  F16  │  F17  │
-   ┌───────┼───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┼───────┐
-   │ trans │F11/WIN│F4/ALT │F5/CTRL│F6/SHFT│  INS  │       │  F19  │F20/SFT│F21/CTL│F22/ALT│F23/GUI│ trans │
-   └───────┼───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┼───────┘
-           │  F10  │  F1   │  F2   │  F3   │ trans │       │  F24  │ trans │ trans │ trans │ trans │
-           └───────┴───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┴───────┴───────┘
-                           │ none  │ none  │ trans │       │ trans │ trans │ trans │
-                           └───────┴───────┴───────┘       └───────┴───────┴───────┘
-```
-</details>
-
-<details>
-<summary><b>🚀 Layer 8: Macro Layer (Portuguese Shortcuts & Coding Operators)</b></summary>
-
-```text
-           ┌───────┬───────┬───────┬───────┬───────┐       ┌───────┬───────┬───────┬───────┬───────┐
-           │ trans │ trans │ trans │ trans │ trans │       │ trans │ trans │ trans │   õ   │ trans │
-   ┌───────┼───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┼───────┐
-   │ trans │   ã   │ trans │ trans │ trans │ trans │       │  ~/   │  !=   │  ==   │  ->   │  =>   │ trans │
-   └───────┼───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┼───────┘
-           │ trans │ trans │ trans │ none  │ trans │       │ trans │ none  │  <=   │  >=   │ trans │
-           └───────┴───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┴───────┴───────┘
-                           │ trans │ trans │ trans │       │ trans │ trans │ trans │
-                           └───────┴───────┴───────┘       └───────┴───────┴───────┘
-```
-</details>
+*   **💻 Built for Software Engineering**: Modern software development requires a massive volume of keyboard shortcuts. The home-row modifier configuration allows you to trigger complex combinations (such as `Ctrl+Alt+Shift+Key`) naturally without wrist fatigue or strain.
+*   **⚡ High-Priority Function Keys (Fun Layer)**: For software engineers, the **Fun Layer (F1-F24)** is crucial—even more important than a mouse layer! Debugging steps, refactoring commands, compiler commands, and test runners rely heavily on function keys. This layout prioritizes a complete F-key cluster easily accessible through your home-row mod-tap thumb keys.
+*   **🇵🇹 Seamless Bilingual Writing (PT & EN)**: Even though most daily typing and coding are written in English, full native support for Portuguese letters is deeply integrated. Custom tap-dances, mod-morphs, and macro clusters provide effortless access to Portuguese letters (`Ç`, `ã`, `õ`, accented vowels, etc.) and punctuation, keeping both programming and native Portuguese writing completely fluent.
+*   **🎨 Visual Customization via Keymap Editor**: To simplify changes, this ZMK keymap is kept perfectly formatted and compatible with [Nick Coutsos' Online Keymap Editor](https://nickcoutsos.github.io/keymap-editor/). You can visually load this repository's layout in the web browser, customize key assignments graphically, and compile behaviors seamlessly while keeping the ZMK code structure clean.
 
 ---
 
