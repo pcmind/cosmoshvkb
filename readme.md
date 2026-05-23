@@ -1,12 +1,12 @@
-# 🌌 Cosmos HK - Custom 38-Key Keyboard
+# 🌌 Unsplithk - Custom 38-Key Keyboard
 
-![Cosmos HK Keyboard](case/unsplithk/top.jpg)
+![Unsplithk Keyboard](case/unsplithk/top.jpg)
 
 ## 🗺️ Interactive Visual Keymap
 
 ![unsplithk Keyboard Layout](unsplithk.svg)
 
-Welcome to the official repository for the **Cosmos HK (unsplithk)**—a personal, compact, un-split 38-key hand-wired wireless keyboard designed for maximum efficiency, ergonomics, and seamless compatibility with Portuguese (PT) operating system layouts.
+Welcome to the official repository for the **Unsplithk**—a personal, compact, un-split 38-key hand-wired wireless keyboard designed for maximum efficiency, ergonomics, and seamless compatibility with Portuguese (PT) operating system layouts.
 
 Powered by [ZMK Firmware](https://zmk.dev/) running on a `nice_nano_v2` controller, this layout features home-row modifiers, tap-dance punctuation shortcuts, conditional layers, custom symbol macros, and localized ZMK behaviors.
 
