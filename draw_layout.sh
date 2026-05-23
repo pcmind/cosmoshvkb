@@ -5,19 +5,24 @@ set -e
 echo "Parsing ZMK keymap to YAML using Docker..."
 docker run --rm -v "$(pwd):/keymap" ghcr.io/hnaderi/keymap-drawer -c /keymap/keymap_drawer.config.yaml parse -z /keymap/config/unsplithk.keymap > unsplithk.yaml
 
-echo "Injecting custom physical layout definition (cols_thumbs_notation)..."
-python3 -c "
-with open('unsplithk.yaml', 'r') as f:
-    content = f.read()
-if 'layout:' not in content:
-    content = 'layout: {cols_thumbs_notation: \"133333+3 3+333331\"}\n' + content
-else:
-    content = content.replace('zmk_keyboard: unsplithk', 'cols_thumbs_notation: \"133333+3 3+333331\"')
-with open('unsplithk.yaml', 'w') as f:
-    f.write(content)
-"
+echo "Generating and injecting custom curved physical layout coordinates..."
+python3 generate_layout.py
 
 echo "Generating vector SVG diagram using Docker..."
-docker run --rm -v "$(pwd):/keymap" ghcr.io/hnaderi/keymap-drawer -c /keymap/keymap_drawer.config.yaml draw /keymap/unsplithk.yaml > unsplithk.svg
+docker run --rm -v "$(pwd):/keymap" ghcr.io/hnaderi/keymap-drawer -c /keymap/keymap_drawer.config.yaml draw -j /keymap/unsplithk_info.json /keymap/unsplithk.yaml > unsplithk.svg
 
 echo "Success! layout vector graphic generated at: unsplithk.svg"
+
+echo "Comparing coordinates..."
+python3 /home/honore/.gemini/antigravity-cli/brain/daf0b908-dd90-4aaf-a1ad-2f68e17a5cc4/scratch/compare_coords.py
+
+
+echo "Inspecting SVG keys..."
+python3 /home/honore/.gemini/antigravity-cli/brain/daf0b908-dd90-4aaf-a1ad-2f68e17a5cc4/scratch/print_svg_groups.py
+
+
+
+
+
+
+

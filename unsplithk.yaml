@@ -1,4 +1,6 @@
-layout: {cols_thumbs_notation: "133333+3 3+333331"}
+layout:
+  qmk_keyboard: unsplithk
+  qmk_layout: LAYOUT_unsplithk
 layers:
   default:
   - Q
