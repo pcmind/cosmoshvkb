@@ -1,48 +1,37 @@
 import json
-import re
-
-def parse_yaml(filepath):
-    with open(filepath, 'r') as f:
-        content = f.read()
-        
-    left_keys = []
-    right_keys = []
-    
-    current_side = None
-    
-    lines = content.split('\n')
-    for line in lines:
-        if 'LEFT SIDE' in line:
-            current_side = 'left'
-            continue
-        elif 'RIGHT SIDE' in line:
-            current_side = 'right'
-            continue
-            
-        # Parse lines like: - {x: 3.25, y: 4.7, r: 30, rx: 3.25, ry: 4.7}
-        match = re.search(r'-\s*\{\s*(.*?)\s*\}', line)
-        if match:
-            pairs = match.group(1).split(',')
-            k = {}
-            for pair in pairs:
-                name, val = pair.split(':')
-                k[name.strip()] = float(val.strip())
-                
-            # Set default values for rotation properties if not specified
-            k['r'] = k.get('r', 0.0)
-            k['rx'] = k.get('rx', k['x'])
-            k['ry'] = k.get('ry', k['y'])
-            
-            if current_side == 'left':
-                left_keys.append(k)
-            elif current_side == 'right':
-                right_keys.append(k)
-                
-    return left_keys, right_keys
 
 def generate_layout():
-    # Load coordinates from xxxxx.info.yaml
-    left, _ = parse_yaml('xxxxx.info.yaml')
+    # Hardcoded left-hand layout coordinates (20 keys) from xxxxx.info.yaml
+    # Thumb cluster is shifted closer horizontally towards the center by 0.4 units
+    left = [
+        # Row 0 (Top Row)
+        {"x": 0.0, "y": 2.75, "r": 0.0, "rx": 0.0, "ry": 2.75},
+        {"x": 1.0, "y": 1.75, "r": 0.0, "rx": 1.0, "ry": 1.75},
+        {"x": 2.0, "y": 1.0, "r": 0.0, "rx": 2.0, "ry": 1.0},
+        {"x": 3.0, "y": 0.5, "r": 0.0, "rx": 3.0, "ry": 0.5},
+        {"x": 4.0, "y": 1.0, "r": 0.0, "rx": 4.0, "ry": 1.0},
+        {"x": 5.0, "y": 1.75, "r": 0.0, "rx": 5.0, "ry": 1.75},
+
+        # Row 1 (Home Row)
+        {"x": 0.25, "y": 3.75, "r": 0.0, "rx": 0.25, "ry": 3.75},
+        {"x": 1.15, "y": 2.75, "r": 0.0, "rx": 1.15, "ry": 2.75},
+        {"x": 2.1, "y": 2.0, "r": 0.0, "rx": 2.1, "ry": 2.0},
+        {"x": 3.0, "y": 1.5, "r": 0.0, "rx": 3.0, "ry": 1.5},
+        {"x": 3.9, "y": 2.0, "r": 0.0, "rx": 3.9, "ry": 2.0},
+        {"x": 4.85, "y": 2.75, "r": 0.0, "rx": 4.85, "ry": 2.75},
+
+        # Row 2 (Bottom Row)
+        {"x": 1.3, "y": 3.75, "r": 0.0, "rx": 1.3, "ry": 3.75},
+        {"x": 2.2, "y": 3.0, "r": 0.0, "rx": 2.2, "ry": 3.0},
+        {"x": 3.0, "y": 2.5, "r": 0.0, "rx": 3.0, "ry": 2.5},
+        {"x": 3.8, "y": 3.0, "r": 0.0, "rx": 3.8, "ry": 3.0},
+        {"x": 4.7, "y": 3.75, "r": 0.0, "rx": 4.7, "ry": 3.75},
+
+        # Left Thumb Cluster (Sweeping Outward Right) - Shifted horizontally right (inwards) by 0.4 units
+        {"x": 3.65, "y": 4.7, "r": 30.0, "rx": 3.65, "ry": 4.7},
+        {"x": 4.5, "y": 5.5, "r": 35.0, "rx": 4.5, "ry": 5.5},
+        {"x": 5.25, "y": 6.4, "r": 40.0, "rx": 5.25, "ry": 6.4}
+    ]
     
     # We enforce perfect mathematical symmetry across the x = 7.5 axis
     x_center = 7.5

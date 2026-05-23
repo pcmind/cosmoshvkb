@@ -117,7 +117,7 @@ parse_config:
     "&my_triple_function": {t: "ENT", h: "CTL"}
     "&lt_k_repeat 4 ENTER": {t: "ENT", h: "SYM"}
     "&lt_k_repeat 2 BACKSPACE": {t: "BSP", h: "NUM"}
-    "&shift_all LEFT_SHIFT 0": {t: "0", h: "SFT"}
+    "&shift_all LEFT_SHIFT 0": {t: "Magic", h: "Shift"}
     "&lrow_layer_to 8 V": {t: "V", h: "MAC"}
 
     # --- Mouse Controls ---
