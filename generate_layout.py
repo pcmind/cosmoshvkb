@@ -148,6 +148,37 @@ def generate_layout():
     except FileNotFoundError:
         content = "layout: {zmk_keyboard: unsplithk}\n"
         
+    # Post-process combos to ensure they are visually positioned beautifully:
+    # 1. none_layer combo: keep trigger on [10, 21] (origin) but align to top of keyboard restricted to default layer
+    content = content.replace(
+        "- p: [10, 21]\n  k: {t: none_l, h: toggle}",
+        "- p: [10, 21]\n  k: {t: none_l, h: toggle}\n  l: [default]\n  a: top"
+    ).replace(
+        "- p: [10, 21]\n  k: none_l",
+        "- p: [10, 21]\n  k: none_l\n  l: [default]\n  a: top"
+    )
+
+    # 2. bluetooth combo: ensure it has l: [default] and a: bottom
+    if "- p: [35, 36, 37]\n  k: bluetooth\n  l: [default]\n  a: bottom" not in content and "- p: [35, 36, 37]\n  k: bluetooth" in content:
+        content = content.replace(
+            "- p: [35, 36, 37]\n  k: bluetooth\n  a: bottom\n  l: [default]",
+            "- p: [35, 36, 37]\n  k: bluetooth\n  l: [default]\n  a: bottom"
+        ).replace(
+            "- p: [35, 36, 37]\n  k: bluetooth\n  l: [default]\n  a: bottom",
+            "- p: [35, 36, 37]\n  k: bluetooth\n  l: [default]\n  a: bottom"
+        ).replace(
+            "- p: [35, 36, 37]\n  k: bluetooth\n  a: bottom",
+            "- p: [35, 36, 37]\n  k: bluetooth\n  l: [default]\n  a: bottom"
+        ).replace(
+            "- p: [35, 36, 37]\n  k: bluetooth",
+            "- p: [35, 36, 37]\n  k: bluetooth\n  l: [default]\n  a: bottom"
+        )
+        
+    # 3. mouse tri-layer conditional combo: visually link NAV thumb (33) and NUM thumb (36) to show Mouse layer access
+    tri_combo = "- p: [33, 36]\n  k: mouse\n  l: [default]\n  a: bottom"
+    if "k: mouse" not in content:
+        content = content.replace("combos:\n", f"combos:\n{tri_combo}\n")
+        
     lines = content.split('\n')
     layout_index = -1
     for idx, line in enumerate(lines):

@@ -316,6 +316,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
+- p: [33, 36]
+  k: mouse
+  l: [default]
+  a: bottom
 - p: [1, 2]
   k: <
 - p: [2, 3]
@@ -334,9 +338,14 @@ combos:
   k: ']'
 - p: [35, 36, 37]
   k: bluetooth
+  l: [default]
   a: bottom
 - p: [10, 21]
   k: {t: none_l, h: toggle}
+  l: [default]
+  a: top
+  l: [default]
+  a: top
 - p: [13, 14]
   k: Ctrl+Shift
 - p: [17, 18]
