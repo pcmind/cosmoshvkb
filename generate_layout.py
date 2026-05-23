@@ -148,6 +148,70 @@ def generate_layout():
     except FileNotFoundError:
         content = "layout: {zmk_keyboard: unsplithk}\n"
         
+    # Post-process layers to highlight the active/held toggle keys
+    held_keys = {
+        'nav': {33: '  - {type: held}'},
+        'num': {36: '  - {type: held}'},
+        'mouse': {33: '  - {type: held}', 36: '  - {type: held}'},
+        'sym': {35: '  - {type: held}'},
+        'fun': {32: '  - {type: held}'},
+        'macro_l': {25: '  - {type: held}'},
+    }
+
+    new_lines = []
+    current_layer = None
+    key_counter = 0
+    
+    lines = content.split('\n')
+    for line in lines:
+        stripped = line.strip()
+        
+        # Detect start of layers section
+        if stripped == 'layers:':
+            current_layer = None
+            new_lines.append(line)
+            continue
+            
+        # Detect end of layers / start of combos
+        if stripped == 'combos:':
+            current_layer = None
+            new_lines.append(line)
+            continue
+            
+        # Detect none_l layer definition
+        if stripped.startswith('none_l:'):
+            new_lines.append("  none_l:")
+            for idx in range(38):
+                if idx in (10, 21):
+                    new_lines.append("  - {type: held}")
+                else:
+                    new_lines.append("  - ''")
+            current_layer = 'none_l'
+            continue
+            
+        # Detect regular layer names
+        if line.startswith('  ') and line.endswith(':') and not line.startswith('    '):
+            current_layer = line.replace(':', '').strip()
+            key_counter = 0
+            new_lines.append(line)
+            continue
+            
+        # If we are parsing keys in none_l, skip them (since we already expanded it)
+        if current_layer == 'none_l' and line.startswith('  - '):
+            continue
+            
+        # If we are parsing keys in other layers, perform replacement
+        if current_layer and line.startswith('  - '):
+            if current_layer in held_keys and key_counter in held_keys[current_layer]:
+                new_lines.append(held_keys[current_layer][key_counter])
+            else:
+                new_lines.append(line)
+            key_counter += 1
+        else:
+            new_lines.append(line)
+            
+    content = '\n'.join(new_lines)
+
     # Post-process combos to ensure they are visually positioned beautifully:
     # 1. none_layer combo: keep trigger on [10, 21] (origin) but align to top of keyboard restricted to default layer
     content = content.replace(
