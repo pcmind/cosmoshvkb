@@ -103,6 +103,9 @@ parse_config:
     "&td_comma_semi": {t: ",", s: ";"}
     "&td_dot_colon": {t: ".", s: ":"}
     "&td_minus_under": {t: "-", s: "_"}
+    "&mm_comma": {t: ",", s: ";"}
+    "&mm_dot": {t: ".", s: ":"}
+    "&mm_minus": {t: "-", s: "_"}
 
     # --- Sticky Modifiers ---
     "&sk LC(LSHFT)": "Ctrl+Shift"
