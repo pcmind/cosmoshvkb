@@ -214,7 +214,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_COMMA_SEMI";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>; // Comfortable middle-ground tap resolution
             bindings = <&kp COMMA>, <&kp PT_SEMICOLON>;
         };
 
@@ -222,7 +222,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_DOT_COLON";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>; // Comfortable middle-ground tap resolution
             bindings = <&kp DOT>, <&kp PT_COLON>;
         };
 
@@ -230,7 +230,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_MINUS_UNDER";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <250>; // Comfortable middle-ground tap resolution
             bindings = <&kp PT_MINUS>, <&kp PT_UNDERSCORE>;
         };
     };
