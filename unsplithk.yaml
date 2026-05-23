@@ -334,6 +334,7 @@ combos:
   k: ']'
 - p: [35, 36, 37]
   k: bluetooth
+  a: bottom
 - p: [10, 21]
   k: {t: none_l, h: toggle}
 - p: [13, 14]
