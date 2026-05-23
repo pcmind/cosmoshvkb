@@ -229,21 +229,10 @@
             mods = <(MOD_LSFT)>;
         };
 
-        shift_repeat: shift_repeat {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
-            bindings = <&ss_cw>;
-            repeat {
-                trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z PT_UNDERSCORE PT_MINUS DOT>;
-                bindings = <&key_repeat>;
-                max-prior-idle-ms = <350>;
-            };
-        };
-
         shift_all: shift_all {
             compatible = "zmk,behavior-hold-tap";
             label = "SHIFT_ALL";
-            bindings = <&kp>, <&shift_repeat>;
+            bindings = <&kp>, <&ss_cw>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
