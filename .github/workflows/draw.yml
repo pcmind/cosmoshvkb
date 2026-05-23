@@ -19,29 +19,20 @@ jobs:
 
       - name: Parse keymap
         run: |
-          keymap -c keymap_drawer.config.yaml parse -z config/unsplithk.keymap > unsplithk.yaml
+          keymap -c keymap_drawer.config.yaml parse -b unsplithk.yaml -z config/unsplithk.keymap > unsplithk.yaml.tmp && mv unsplithk.yaml.tmp unsplithk.yaml
 
-      - name: Fix custom physical layout
+      - name: Generate custom physical layout coordinates
         run: |
-          python3 -c "
-          with open('unsplithk.yaml', 'r') as f:
-              content = f.read()
-          if 'layout:' not in content:
-              content = 'layout: {cols_thumbs_notation: \"133333+3 3+333331\"}\n' + content
-          else:
-              content = content.replace('zmk_keyboard: unsplithk', 'cols_thumbs_notation: \"133333+3 3+333331\"')
-          with open('unsplithk.yaml', 'w') as f:
-              f.write(content)
-          "
+          python3 generate_layout.py
 
       - name: Draw keymap
         run: |
-          keymap -c keymap_drawer.config.yaml draw unsplithk.yaml > unsplithk.svg
+          keymap -c keymap_drawer.config.yaml draw -j unsplithk_info.json unsplithk.yaml > unsplithk.svg
 
-      - name: Commit and Push SVG
+      - name: Commit and Push Layout Diagrams
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add unsplithk.yaml unsplithk.svg
-          git commit -m "docs: auto-generate keymap SVG and YAML diagrams" || exit 0
+          git add unsplithk.yaml unsplithk_info.json unsplithk.svg
+          git commit -m "docs: auto-generate keymap SVG and YAML diagrams with custom physical layout" || exit 0
           git push

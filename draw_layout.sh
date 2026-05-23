@@ -13,13 +13,6 @@ docker run --rm -v "$(pwd):/keymap" ghcr.io/hnaderi/keymap-drawer -c /keymap/key
 
 echo "Success! layout vector graphic generated at: unsplithk.svg"
 
-echo "Comparing coordinates..."
-python3 /home/honore/.gemini/antigravity-cli/brain/daf0b908-dd90-4aaf-a1ad-2f68e17a5cc4/scratch/compare_coords.py
-
-
-echo "Inspecting SVG keys..."
-python3 /home/honore/.gemini/antigravity-cli/brain/daf0b908-dd90-4aaf-a1ad-2f68e17a5cc4/scratch/print_svg_groups.py
-
 
 
 
