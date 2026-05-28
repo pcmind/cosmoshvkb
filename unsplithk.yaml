@@ -43,10 +43,10 @@ layers:
   - {t: Magic, h: Shift}
   nav:
   - {t: ▽, type: trans}
-  - Ctl+AltGr+LEFT
-  - Ctl+Alt+RIGHT
+  - LC(RA(LEFT))
+  - LC(LA(RIGHT))
   - {t: ▽, type: trans}
-  - Gui+Ctl+LEFT ARROW
+  - LG(LC(LEFT ARROW))
   - CANCEL
   - REPEAT
   - {t: ▽, type: trans}
@@ -57,18 +57,18 @@ layers:
   - LEFT ALT
   - LEFT CONTROL
   - LEFT SHIFT
-  - Gui+Ctl+RIGHT ARROW
+  - LG(LC(RIGHT ARROW))
   - CLCK
   - LEFT
   - DOWN ARROW
   - UP ARROW
   - RIGHT
   - DEL
-  - Ctl+Z
-  - Ctl+X
-  - Ctl+C
-  - Ctl+V
-  - Ctl+Sft+Z
+  - LC(Z)
+  - LC(X)
+  - LC(C)
+  - LC(V)
+  - LC(LS(Z))
   - INS
   - HOME
   - PAGE DOWN
@@ -122,7 +122,7 @@ layers:
   mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+E
+  - LC(E)
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -131,7 +131,7 @@ layers:
   - Right Click
   - {t: ▽, type: trans}
   - ESC
-  - Ctl+A
+  - LC(A)
   - LALT
   - LCTRL
   - LSHFT
@@ -142,11 +142,11 @@ layers:
   - Mouse Up
   - Mouse Right
   - {t: ▽, type: trans}
-  - Ctl+Z
-  - Ctl+X
-  - Ctl+C
-  - Ctl+V
-  - Sft+Ctl+Z
+  - LC(Z)
+  - LC(X)
+  - LC(C)
+  - LC(V)
+  - LS(LC(Z))
   - {t: ▽, type: trans}
   - Scroll Left
   - Scroll Down
@@ -264,7 +264,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&soft_off'
+  - Soft Off
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -275,45 +275,6 @@ layers:
   - {type: held}
   - {type: held}
   - {type: held}
-  none_l:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   macro_l:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -360,28 +321,34 @@ combos:
   a: bottom
 - p: [1, 2]
   k: <
+  l: [default]
 - p: [2, 3]
   k: '{'
+  l: [default]
 - p: [24, 25]
   k: (
+  l: [default]
 - p: [23, 24]
   k: '['
+  l: [default]
 - p: [6, 7]
   k: '}'
+  l: [default]
 - p: [7, 8]
   k: '>'
+  l: [default]
 - p: [28, 29]
   k: )
+  l: [default]
 - p: [29, 30]
   k: ']'
+  l: [default]
 - p: [35, 36, 37]
   k: bluetooth
   l: [default]
   a: bottom
 - p: [10, 21]
-  k: {t: none_l, h: toggle}
-  l: [default]
-  a: top
+  k: Soft Off
   l: [default]
   a: top
 - p: [13, 14]

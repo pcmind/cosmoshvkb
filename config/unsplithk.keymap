@@ -41,41 +41,49 @@
         lessthan {
             bindings = <&kp PT_LESS_THAN>;
             key-positions = <1 2>;
+            layers = <0>;
         };
 
         openbrace {
             bindings = <&kp PT_LEFT_BRACE>;
             key-positions = <2 3>;
+            layers = <0>;
         };
 
         openparent {
             bindings = <&kp PT_LEFT_PARENTHESIS>;
             key-positions = <24 25>;
+            layers = <0>;
         };
 
         openbraket {
             bindings = <&kp PT_LEFT_BRACKET>;
             key-positions = <23 24>;
+            layers = <0>;
         };
 
         closebrace {
             bindings = <&kp PT_RIGHT_BRACE>;
             key-positions = <6 7>;
+            layers = <0>;
         };
 
         closegreater {
             bindings = <&kp PT_GREATER_THAN>;
             key-positions = <7 8>;
+            layers = <0>;
         };
 
         closeparent {
             bindings = <&kp PT_RIGHT_PARENTHESIS>;
             key-positions = <28 29>;
+            layers = <0>;
         };
 
         closebrack {
             bindings = <&kp PT_RIGHT_BRACKET>;
             key-positions = <29 30>;
+            layers = <0>;
         };
 
         bluetoothlayer {
@@ -92,21 +100,25 @@
         left_ctrl_shift {
             bindings = <&sk LC(LSHFT)>;
             key-positions = <13 14>;
+            layers = <0>;
         };
 
         right_ctrl_shift {
             bindings = <&sk LC(LSHFT)>;
             key-positions = <17 18>;
+            layers = <0>;
         };
 
         left_ctrl_alt {
             bindings = <&sk LC(LALT)>;
             key-positions = <12 13>;
+            layers = <0>;
         };
 
         right_ctrl_alt {
             bindings = <&sk LC(LALT)>;
             key-positions = <18 19>;
+            layers = <0>;
         };
     };
 
