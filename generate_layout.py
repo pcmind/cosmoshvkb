@@ -213,13 +213,19 @@ def generate_layout():
     content = '\n'.join(new_lines)
 
     # Post-process combos to ensure they are visually positioned beautifully:
-    # 1. none_layer combo: keep trigger on [10, 21] (origin) but align to top of keyboard restricted to default layer
+    # 1. none_layer / soft_off combo: keep trigger on [10, 21] (origin) but align to top of keyboard restricted to default layer
     content = content.replace(
         "- p: [10, 21]\n  k: {t: none_l, h: toggle}",
         "- p: [10, 21]\n  k: {t: none_l, h: toggle}\n  l: [default]\n  a: top"
     ).replace(
         "- p: [10, 21]\n  k: none_l",
         "- p: [10, 21]\n  k: none_l\n  l: [default]\n  a: top"
+    ).replace(
+        "- p: [10, 21]\n  k: '&soft_off'",
+        "- p: [10, 21]\n  k: '&soft_off'\n  l: [default]\n  a: top"
+    ).replace(
+        "- p: [10, 21]\n  k: soft_off",
+        "- p: [10, 21]\n  k: soft_off\n  l: [default]\n  a: top"
     )
 
     # 2. bluetooth combo: ensure it has l: [default] and a: bottom

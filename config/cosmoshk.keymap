@@ -66,8 +66,9 @@
         };
 
         none_layer {
-            bindings = <&to 7>;
+            bindings = <&soft_off>;
             key-positions = <37 36 38 39>;
+            layers = <0>;
         };
     };
 
@@ -239,15 +240,5 @@
             >;
         };
 
-        none_l {
-            bindings = <
-&none  &none  &none  &none  &none  &none         &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none         &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none         &none  &none  &none  &none  &none  &none
-              &none  &none                                     &none  &none
-                     &none  &none  &none         &none  &none  &none
-                            &none  &none  &none  &none
-            >;
-        };
     };
 };

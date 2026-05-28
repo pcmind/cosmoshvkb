@@ -118,7 +118,8 @@ parse_config:
     "&lt_k_repeat 4 ENTER": {t: "ENT", h: "SYM"}
     "&lt_k_repeat 2 BACKSPACE": {t: "BSP", h: "NUM"}
     "&shift_all LEFT_SHIFT 0": {t: "Magic", h: "Shift"}
-    "&lrow_layer_to 8 V": {t: "V", h: "MAC"}
+    "&lrow_layer_to 7 V": {t: "V", h: "MAC"}
+    "&soft_off": "Soft Off"
 
     # --- Mouse Controls ---
     "&mkp MB3": "Middle Click"
