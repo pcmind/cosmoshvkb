@@ -265,7 +265,7 @@
         mm_comma: mm_comma {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_COMMA";
-            bindings = <&td_comma_semi>, <&kp PT_SEMICOLON>;
+            bindings = <&kp COMMA>, <&kp PT_SEMICOLON>;
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -273,7 +273,7 @@
         mm_dot: mm_dot {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_DOT";
-            bindings = <&td_dot_colon>, <&kp PT_COLON>;
+            bindings = <&kp DOT>, <&kp PT_COLON>;
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -281,7 +281,7 @@
         mm_minus: mm_minus {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_MINUS";
-            bindings = <&td_minus_under>, <&kp PT_UNDERSCORE>;
+            bindings = <&kp PT_MINUS>, <&kp PT_UNDERSCORE>;
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
