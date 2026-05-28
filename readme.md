@@ -28,8 +28,11 @@ Powered by [ZMK Firmware](https://zmk.dev/) running on a `nice_nano_v2` controll
 
 ## 🧠 Layout Philosophy & Design Choices
 
-This custom 38-key layout is structured around a specific philosophy tailored for software engineering, intensive IDE utilization, and bilingual writing:
+This custom 38-key layout is structured around a specific philosophy tailored for software engineering, intensive IDE utilization, bilingual writing, and modern workstation ergonomics:
 
+*   **🖱️ Left-Hand Dominant / Right-Hand Mouse Co-existence (One-Handed Control)**: A core pillar of this design is enabling extensive, high-speed single-handed operation with the left hand, keeping the right hand free on the mouse:
+    *   **Dedicated Editing Block**: When the **Nav Layer** is active (held via the left-thumb `SPACE` key), the left hand acts as a powerful macropad. The bottom row maps direct, single-tap commands to standard shortcuts: `Ctrl+Z` (Undo), `Ctrl+X` (Cut), `Ctrl+C` (Copy), `Ctrl+V` (Paste), and `Ctrl+Shift+Z` (Redo), completely eliminating awkward multi-finger stretches.
+    *   **Easy Access to `Enter` and `Backspace`**: Heavy navigation and command execution are fully optimized for the left hand. You have instant access to `Enter` via the left thumb's `my_triple_function` mod-tap, and `Backspace` is mapped on the left home-row of the navigation layers, allowing you to edit and correct code single-handedly.
 *   **💻 Built for Software Engineering**: Modern software development requires a massive volume of keyboard shortcuts. The home-row modifier configuration allows you to trigger complex combinations (such as `Ctrl+Alt+Shift+Key`) naturally without wrist fatigue or strain.
 *   **⚡ High-Priority Function Keys (Fun Layer)**: For software engineers, the **Fun Layer (F1-F24)** is crucial—even more important than a mouse layer! Debugging steps, refactoring commands, compiler commands, and test runners rely heavily on function keys. This layout prioritizes a complete F-key cluster easily accessible through your home-row mod-tap thumb keys.
 *   **🇵🇹 Seamless Bilingual Writing (PT & EN)**: Even though most daily typing and coding are written in English, full native support for Portuguese letters is deeply integrated. Custom tap-dances, mod-morphs, and macro clusters provide effortless access to Portuguese letters (`Ç`, `ã`, `õ`, accented vowels, etc.) and punctuation, keeping both programming and native Portuguese writing completely fluent.
