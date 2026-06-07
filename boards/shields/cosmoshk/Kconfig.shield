@@ -1,5 +1,0 @@
-config SHIELD_COSMOSHK_LEFT
-    def_bool $(shields_list_contains,cosmoshk_left)
-
-config SHIELD_COSMOSHK_RIGHT
-    def_bool $(shields_list_contains,cosmoshk_right)
