@@ -40,50 +40,62 @@
 
         lessthan {
             bindings = <&kp PT_LESS_THAN>;
-            key-positions = <1 2>;
-            layers = <0>;
+            key-positions = <18 17>;
+            layers = <1>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
         };
 
         openbrace {
-            bindings = <&kp PT_LEFT_BRACE>;
-            key-positions = <2 3>;
+            bindings = <&hmr_combo RS(RCTRL) PT_LEFT_BRACE>;
+            key-positions = <17 18>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
         };
 
         openparent {
             bindings = <&kp PT_LEFT_PARENTHESIS>;
-            key-positions = <24 25>;
-            layers = <0>;
+            key-positions = <6 7>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
         };
 
         openbraket {
             bindings = <&kp PT_LEFT_BRACKET>;
-            key-positions = <23 24>;
-            layers = <0>;
+            key-positions = <28 29>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
         };
 
         closebrace {
-            bindings = <&kp PT_RIGHT_BRACE>;
-            key-positions = <6 7>;
+            bindings = <&hmr_combo LA(RCTRL) PT_RIGHT_BRACE>;
+            key-positions = <18 19>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
         };
 
         closegreater {
             bindings = <&kp PT_GREATER_THAN>;
-            key-positions = <7 8>;
-            layers = <0>;
+            key-positions = <19 18>;
+            layers = <1>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
         };
 
         closeparent {
             bindings = <&kp PT_RIGHT_PARENTHESIS>;
-            key-positions = <28 29>;
-            layers = <0>;
+            key-positions = <7 8>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
         };
 
-        closebrack {
+        closebracket {
             bindings = <&kp PT_RIGHT_BRACKET>;
             key-positions = <29 30>;
-            layers = <0>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
         };
 
         bluetoothlayer {
@@ -97,28 +109,123 @@
             layers = <0>;
         };
 
-        left_ctrl_shift {
-            bindings = <&sk LC(LSHFT)>;
-            key-positions = <13 14>;
-            layers = <0>;
+        combo_copy {
+            bindings = <&kp LC(PT_C)>;
+            key-positions = <24 23>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
         };
 
-        right_ctrl_shift {
-            bindings = <&sk LC(LSHFT)>;
-            key-positions = <17 18>;
-            layers = <0>;
+        combo_past {
+            bindings = <&kp LC(PT_V)>;
+            key-positions = <24 25>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
         };
 
-        left_ctrl_alt {
-            bindings = <&sk LC(LALT)>;
+        combo_cut {
+            bindings = <&kp LC(PT_X)>;
+            key-positions = <25 23>;
+            timeout-ms = <18>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_sym_tild {
+            bindings = <&kp PT_TILDE>;
+            key-positions = <3 14>;
+            require-prior-idle-ms = <50>;
+            timeout-ms = <30>;
+        };
+
+        combo_sym_exclam {
+            bindings = <&kp PT_EXCLAMATION>;
+            key-positions = <12 1>;
+            require-prior-idle-ms = <50>;
+            timeout-ms = <30>;
+        };
+
+        combo_sym_singleq {
+            bindings = <&kp PT_SINGLE_QUOTE>;
+            key-positions = <6 17>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
+        };
+
+        combo_sym_dquote {
+            bindings = <&kp PT_DOUBLE_QUOTES>;
+            key-positions = <8 19>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
+        };
+
+        combo_symb_pipe {
+            bindings = <&kp PT_PIPE>;
+            key-positions = <12 23>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
+        };
+
+        combo_sym_dollar {
+            bindings = <&kp PT_DOLLAR>;
+            key-positions = <19 30>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
+        };
+
+        combo_sym_slash {
+            bindings = <&kp PT_SLASH>;
+            key-positions = <7 18>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
+        };
+
+        combo_sym_bslh {
+            bindings = <&kp PT_BSLH>;
+            key-positions = <2 13>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
+        };
+
+        combo_sym_acute {
+            bindings = <&kp PT_ACUTE>;
+            key-positions = <3 2>;
+            timeout-ms = <25>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_sym_grave {
+            bindings = <&kp PT_GRAVE>;
+            key-positions = <2 1>;
+            timeout-ms = <25>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_sym_question {
+            bindings = <&hml_combo LA(LCTRL) PT_QUESTION>;
             key-positions = <12 13>;
-            layers = <0>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
         };
 
-        right_ctrl_alt {
-            bindings = <&sk LC(LALT)>;
-            key-positions = <18 19>;
-            layers = <0>;
+        combo_sym_equal {
+            bindings = <&hml_combo LS(LCTRL) PT_EQUAL>;
+            key-positions = <13 14>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
+        };
+
+        combo_sym_underscore {
+            bindings = <&hml_combo LA(LCTRL) PT_UNDER>;
+            key-positions = <12 14>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
+        };
+
+        combo_sym_star {
+            bindings = <&hmr_combo LA(RCTRL) PT_ASTRK>;
+            key-positions = <17 19>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
         };
     };
 
@@ -134,7 +241,6 @@
     behaviors {
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_LEFT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -148,7 +254,6 @@
 
         hmr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MOES_RIGHT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -162,7 +267,6 @@
 
         hml_shift: homerow_mods_left_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_LEFT_SHIFT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -171,12 +275,12 @@
             flavor = "balanced";
             hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 27 28 29 30 31 35 36 37 34>;
             require-prior-idle-ms = <150>;
+
             // Removing hold-trigger-on-release allows Shift to activate instantly on cross-hand key press
         };
 
         hmr_shift: homerow_mods_right_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_RIGHT_SHIFT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -185,12 +289,12 @@
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 34 33 32 35>;
             require-prior-idle-ms = <150>;
+
             // Removing hold-trigger-on-release allows Shift to activate instantly on cross-hand key press
         };
 
         td_hold_tap: td_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "TD_HOLD_TAP";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -201,7 +305,6 @@
 
         my_triple_function: my_triple_function {
             compatible = "zmk,behavior-tap-dance";
-            label = "MY_TRIPLE_FUNCTION";
             #binding-cells = <0>;
             bindings = <&td_hold_tap LCTRL ENTER>, <&mo 5>, <&sl 5>;
 
@@ -210,7 +313,6 @@
 
         lt_k_repeat: lt_k_repeat {
             compatible = "zmk,behavior-hold-tap";
-            label = "LT_K_REPEAT";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -221,7 +323,6 @@
 
         lrow_layer_to: lrow_layer_to {
             compatible = "zmk,behavior-hold-tap";
-            label = "LROW_LAYER_TO";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -235,7 +336,6 @@
 
         ss_cw: ss_cw {
             compatible = "zmk,behavior-mod-morph";
-            label = "SS_CW";
             bindings = <&sk LEFT_SHIFT>, <&caps_word>;
 
             #binding-cells = <0>;
@@ -244,59 +344,60 @@
 
         shift_all: shift_all {
             compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_ALL";
             bindings = <&kp>, <&ss_cw>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
 
-        td_comma_semi: td_comma_semi {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_COMMA_SEMI";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>; // Comfortable middle-ground tap resolution
-            bindings = <&kp COMMA>, <&kp PT_SEMICOLON>;
-        };
-
-        td_dot_colon: td_dot_colon {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_DOT_COLON";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>; // Comfortable middle-ground tap resolution
-            bindings = <&kp DOT>, <&kp PT_COLON>;
-        };
-
-        td_minus_under: td_minus_under {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_MINUS_UNDER";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>; // Comfortable middle-ground tap resolution
-            bindings = <&kp PT_MINUS>, <&kp PT_UNDERSCORE>;
-        };
-
         mm_comma: mm_comma {
             compatible = "zmk,behavior-mod-morph";
-            label = "MM_COMMA";
             bindings = <&kp COMMA>, <&kp PT_SEMICOLON>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_dot: mm_dot {
             compatible = "zmk,behavior-mod-morph";
-            label = "MM_DOT";
             bindings = <&kp DOT>, <&kp PT_COLON>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_minus: mm_minus {
             compatible = "zmk,behavior-mod-morph";
-            label = "MM_MINUS";
             bindings = <&kp PT_MINUS>, <&kp PT_UNDERSCORE>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        hmr_combo: homerow_mods_right_combo {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 34 33 32 35>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+        };
+
+        hml_combo: homerow_mods_left_combo {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <34 35 36 37 27 16 5 6 17 28 7 18 29 8 19 9 20 31 30 21>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
         };
     };
 
@@ -307,7 +408,6 @@
             wait-ms = <15>;
             tap-ms = <15>;
             bindings = <&kp PT_EQUAL &kp PT_EQUAL>;
-            label = "EQ_EQ_M";
         };
 
         not_eq_m: not_eq_m {
@@ -316,7 +416,6 @@
             wait-ms = <15>;
             tap-ms = <15>;
             bindings = <&kp PT_EXCL &kp PT_EQUAL>;
-            label = "NOT_EQ_M";
         };
 
         jlambda_m: jlambda {
@@ -325,7 +424,6 @@
             wait-ms = <15>;
             tap-ms = <15>;
             bindings = <&kp PT_MINUS &kp PT_GT>;
-            label = "JLAMBDA";
         };
 
         eq_gt_m: eq_gt_m {
@@ -334,7 +432,6 @@
             wait-ms = <15>;
             tap-ms = <15>;
             bindings = <&kp PT_EQUAL &kp PT_GT>;
-            label = "EQ_GT_M";
         };
 
         a_tilde_m: a_till_m {
@@ -343,7 +440,6 @@
             wait-ms = <15>;
             tap-ms = <15>;
             bindings = <&kp PT_TILDE &kp PT_A>;
-            label = "A_TILL_M";
         };
 
         o_tilde_m: o_tilde_m {
@@ -352,7 +448,6 @@
             wait-ms = <15>;
             tap-ms = <15>;
             bindings = <&kp PT_TILDE &kp PT_O>;
-            label = "O_TILDE_M";
         };
 
         gt_eq_m: qt_eq_m {
@@ -361,7 +456,6 @@
             wait-ms = <15>;
             tap-ms = <15>;
             bindings = <&kp PT_GT &kp PT_EQUAL>;
-            label = "QT_EQ_M";
         };
 
         lt_eq_m: lt_eq_m {
@@ -370,7 +464,6 @@
             wait-ms = <15>;
             tap-ms = <15>;
             bindings = <&kp PT_LT &kp PT_EQUAL>;
-            label = "LT_EQ_M";
         };
 
         tilde_slash_m: tilde_slash_m {
@@ -379,14 +472,12 @@
             wait-ms = <15>;
             tap-ms = <15>;
             bindings = <&kp PT_TILDE &kp PT_SPACE &kp PT_SLASH>;
-            label = "TILDE_SLASH_M";
         };
 
         mc_cancel: mc_cancel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_CANCEL>;
-            label = "MC_CANCEL";
         };
     };
 
@@ -401,10 +492,10 @@
             //                     | CTRL | SPC  | MOUS |                   | RSE  |  ENT  |  SPC  |
 
             bindings = <
-          &kp Q        &kp W        &kp E               &kp R                 &kp T                  &kp Y                 &kp U                     &kp I                    &kp O            &kp P
-&kp ESC   &hml LWIN A  &hml LALT S  &hml LCTRL D        &hml_shift LSHFT F    &kp G                  &kp H                 &hmr_shift RIGHT_SHIFT J  &hmr RCTRL K             &hmr LEFT_ALT L  &hmr LEFT_GUI PT_C_CEDILLA  &kp DEL
-          &kp Z        &kp X        &kp C               &lrow_layer_to 7 V    &kp B                  &kp N                 &kp M                     &mm_comma                &mm_dot          &mm_minus
-                                    &lt_k_repeat 5 TAB  &lt_k_repeat 1 SPACE  &my_triple_function    &lt_k_repeat 4 ENTER  &lt_k_repeat 2 BACKSPACE  &shift_all LEFT_SHIFT 0
+         &kp Q        &kp W        &kp E               &kp R                 &kp T                  &kp Y                 &kp U                     &kp I                    &kp O            &kp P
+&kp ESC  &hml LWIN A  &hml LALT S  &hml LCTRL D        &hml_shift LSHFT F    &kp G                  &kp H                 &hmr_shift RIGHT_SHIFT J  &hmr RCTRL K             &hmr LEFT_ALT L  &hmr LEFT_GUI PT_C_CEDILLA  &kp DEL
+         &kp Z        &kp X        &kp C               &lrow_layer_to 7 V    &kp B                  &kp N                 &kp M                     &mm_comma                &mm_dot          &mm_minus
+                                   &lt_k_repeat 5 TAB  &lt_k_repeat 1 SPACE  &my_triple_function    &lt_k_repeat 4 ENTER  &lt_k_repeat 2 BACKSPACE  &shift_all LEFT_SHIFT 0
             >;
         };
 
@@ -446,10 +537,10 @@
 
         fun {
             bindings = <
-        &kp F12        &kp F7            &kp F8                &kp F9              &kp PRINTSCREEN    &kp F13  &kp F14         &kp F15         &kp F16            &kp F17
+        &kp F12        &kp F7            &kp F8                &kp F9                    &kp PRINTSCREEN    &kp F13  &kp F14               &kp F15         &kp F16            &kp F17
 &trans  &hml LWIN F11  &hml LEFT_ALT F4  &hml LEFT_CONTROL F5  &hml_shift LEFT_SHIFT F6  &kp INSERT         &kp F19  &hmr_shift RSHFT F20  &hmr RCTRL F21  &hmr LEFT_ALT F22  &hmr LGUI F23  &trans
-        &kp F10        &kp F1            &kp F2                &kp F3              &trans             &kp F24  &trans          &trans          &trans             &trans
-                                         &none                 &none               &trans             &trans   &trans          &trans
+        &kp F10        &kp F1            &kp F2                &kp F3                    &trans             &kp F24  &trans                &trans          &trans             &trans
+                                         &none                 &none                     &trans             &trans   &trans                &trans
             >;
         };
 

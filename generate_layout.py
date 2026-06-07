@@ -249,6 +249,19 @@ def generate_layout():
     if "k: mouse" not in content:
         content = content.replace("combos:\n", f"combos:\n{tri_combo}\n")
         
+    # 4. align underscore and star combos to top of the keyboard (above the entire keyboard layout)
+    if "- p: [12, 14]\n  k: {t: _, h: Alt+Ctrl}\n  a: top" not in content:
+        content = content.replace(
+            "- p: [12, 14]\n  k: {t: _, h: Alt+Ctrl}",
+            "- p: [12, 14]\n  k: {t: _, h: Alt+Ctrl}\n  a: top\n  o: 2.5"
+        )
+    if "- p: [17, 19]\n  k: {t: '*', h: Alt+Ctrl}\n  a: top" not in content:
+        content = content.replace(
+            "- p: [17, 19]\n  k: {t: '*', h: Alt+Ctrl}",
+            "- p: [17, 19]\n  k: {t: '*', h: Alt+Ctrl}\n  a: top\n  o: 2.5"
+        )
+
+
     lines = content.split('\n')
     layout_index = -1
     for idx, line in enumerate(lines):
