@@ -1,0 +1,11 @@
+# ZMK build outputs
+build/
+
+# Temp files
+*.tmp
+
+# VS Code directory
+.vscode/
+
+# Local build and install script
+build_install.sh

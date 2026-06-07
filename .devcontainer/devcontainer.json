@@ -1,0 +1,31 @@
+{
+  "name": "Unsplithk ZMK Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "runArgs": [
+    "--security-opt",
+    "label=disable",
+    "--security-opt",
+    "seccomp=unconfined"
+  ],
+  "containerEnv": {
+    "WORKSPACE_DIR": "${containerWorkspaceFolder}",
+    "PROMPT_COMMAND": "history -a"
+  },
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "ms-vscode.cpptools",
+        "twxs.cmake",
+        "ms-python.python"
+      ]
+    }
+  },
+  "postCreateCommand": "/bin/bash .devcontainer/post-create.sh"
+}

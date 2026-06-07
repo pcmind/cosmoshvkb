@@ -5,7 +5,7 @@
 This repository contains the files for a personal 38-key, un-split, hand-wired, wireless keyboard. The project includes:
 
 *   **Keyboard Layout:** The physical layout of the keyboard is designed using [Ergogen](https://ergogen.xyz/) and defined in the `ergogen.yaml` file.
-*   **Firmware:** The keyboard firmware is based on the [ZMK Firmware](https://zmk.dev/). The keymap is defined in the `config/` directory, with specific files for different keyboard variations (`cosmoshk.keymap` and `unsplithk.keymap`).
+*   **Firmware:** The keyboard firmware is based on the [ZMK Firmware](https://zmk.dev/). The keymap is defined in the `config/` directory, with specific files for the keyboard layout (`unsplithk.keymap`).
 *   **Hardware:** The `boards/` directory contains the shield configurations for the custom keyboards, which are designed to be used with a `nice_nano_v2` controller. The `case/` directory contains STL files for 3D printing the keyboard case.
 
 ## Building and Running

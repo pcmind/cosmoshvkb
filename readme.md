@@ -14,10 +14,6 @@ Powered by [ZMK Firmware](https://zmk.dev/) running on a `nice_nano_v2` controll
 
 ## ✨ Key Features & Enhancements
 
-*   **⚡ Tap-Dance Punctuation**: Standard punctuation keys double up as common symbols on a quick double-tap, eliminating the need for layer switches:
-    *   `,` $\rightarrow$ `;` (Semicolon)
-    *   `.` $\rightarrow$ `:` (Colon)
-    *   `-` $\rightarrow$ `_` (Underscore)
 *   **🔄 Home-Row Repeat Key**: ZMK's `&key_repeat` is placed at the physical **`U`** position on the Nav layer. Hold the Nav thumb (SPACE) and tap `U` to repeat the last pressed key or macro as many times as you like.
 *   **🖱️ Native Mouse Layer (Tri-Layer)**: Hold both the **Nav** (Layer 1) and **Num** (Layer 2) thumb keys simultaneously to automatically trigger the **Mouse Layer** (Layer 3) with mouse pointer and scrolling movements.
 *   **✍️ Localized `caps_word`**: Customized Portuguese continue-list including `PT_UNDERSCORE`, `PT_MINUS`, and `PT_SINGLE_QUOTE`. Typographical hyphens, underscores, or apostrophes (such as in *d'água*) will not deactivate `caps_word` capitalization.
