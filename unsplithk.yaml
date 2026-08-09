@@ -319,9 +319,8 @@ combos:
   k: mouse
   l: [default]
   a: bottom
-- p: [18, 17]
-  k: <
-  l: [nav]
+- p: [12, 13]
+  k: '&hml_combo LA(LCTRL) (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))'
 - p: [17, 18]
   k: {t: '{', h: Shift+Ctrl}
   l: [default]
@@ -332,9 +331,8 @@ combos:
 - p: [18, 19]
   k: {t: '}', h: Alt+Ctrl}
   l: [default]
-- p: [19, 18]
-  k: '>'
-  l: [nav]
+- p: [13, 14]
+  k: '&hml_combo LS(LCTRL) (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))'
 - p: [7, 8]
   k: )
 - p: [29, 30]
@@ -346,41 +344,5 @@ combos:
 - p: [10, 21]
   k: Soft Off
   l: [default]
-- p: [24, 23]
-  k: Ctrl+C
-- p: [24, 25]
-  k: Ctrl+V
-- p: [25, 23]
-  k: Ctrl+X
-- p: [3, 14]
-  k: '~'
-- p: [12, 1]
-  k: '!'
-- p: [6, 17]
-  k: ''''
-- p: [8, 19]
-  k: '"'
-- p: [12, 23]
-  k: '|'
-- p: [19, 30]
-  k: $
-- p: [7, 18]
-  k: /
-- p: [2, 13]
-  k: \
-- p: [3, 2]
-  k: ´
-- p: [2, 1]
-  k: '`'
-- p: [12, 13]
-  k: {t: '?', h: Alt+Ctrl}
-- p: [13, 14]
-  k: {t: '=', h: Shift+Ctrl}
-- p: [12, 14]
-  k: {t: _, h: Alt+Ctrl}
-  a: top
-  o: 2.5
 - p: [17, 19]
-  k: {t: '*', h: Alt+Ctrl}
-  a: top
-  o: 2.5
+  k: '&hmr_combo LA(RCTRL) (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS)))'

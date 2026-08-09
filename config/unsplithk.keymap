@@ -39,63 +39,61 @@
         compatible = "zmk,combos";
 
         lessthan {
-            bindings = <&kp PT_LESS_THAN>;
-            key-positions = <18 17>;
-            layers = <1>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <25>;
+            bindings = <&hml_combo LA(LCTRL) PT_LESS_THAN>;
+            key-positions = <12 13>;
+            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
         };
 
         openbrace {
             bindings = <&hmr_combo RS(RCTRL) PT_LEFT_BRACE>;
             key-positions = <17 18>;
             layers = <0>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <25>;
+            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
         };
 
         openparent {
             bindings = <&kp PT_LEFT_PARENTHESIS>;
             key-positions = <6 7>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <25>;
+            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
         };
 
         openbraket {
             bindings = <&kp PT_LEFT_BRACKET>;
             key-positions = <28 29>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <25>;
+            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
         };
 
         closebrace {
             bindings = <&hmr_combo LA(RCTRL) PT_RIGHT_BRACE>;
             key-positions = <18 19>;
             layers = <0>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <25>;
+            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
         };
 
         closegreater {
-            bindings = <&kp PT_GREATER_THAN>;
-            key-positions = <19 18>;
-            layers = <1>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <25>;
+            bindings = <&hml_combo LS(LCTRL) PT_GREATER_THAN>;
+            key-positions = <13 14>;
+            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
         };
 
         closeparent {
             bindings = <&kp PT_RIGHT_PARENTHESIS>;
             key-positions = <7 8>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <25>;
+            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
         };
 
         closebracket {
             bindings = <&kp PT_RIGHT_BRACKET>;
             key-positions = <29 30>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <25>;
+            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
         };
 
         bluetoothlayer {
@@ -108,124 +106,11 @@
             key-positions = <10 21>;
             layers = <0>;
         };
-
-        combo_copy {
-            bindings = <&kp LC(PT_C)>;
-            key-positions = <24 23>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <25>;
-        };
-
-        combo_past {
-            bindings = <&kp LC(PT_V)>;
-            key-positions = <24 25>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <25>;
-        };
-
-        combo_cut {
-            bindings = <&kp LC(PT_X)>;
-            key-positions = <25 23>;
-            timeout-ms = <18>;
-            require-prior-idle-ms = <150>;
-        };
-
-        combo_sym_tild {
-            bindings = <&kp PT_TILDE>;
-            key-positions = <3 14>;
-            require-prior-idle-ms = <50>;
-            timeout-ms = <30>;
-        };
-
-        combo_sym_exclam {
-            bindings = <&kp PT_EXCLAMATION>;
-            key-positions = <12 1>;
-            require-prior-idle-ms = <50>;
-            timeout-ms = <30>;
-        };
-
-        combo_sym_singleq {
-            bindings = <&kp PT_SINGLE_QUOTE>;
-            key-positions = <6 17>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
-        };
-
-        combo_sym_dquote {
-            bindings = <&kp PT_DOUBLE_QUOTES>;
-            key-positions = <8 19>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
-        };
-
-        combo_symb_pipe {
-            bindings = <&kp PT_PIPE>;
-            key-positions = <12 23>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
-        };
-
-        combo_sym_dollar {
-            bindings = <&kp PT_DOLLAR>;
-            key-positions = <19 30>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
-        };
-
-        combo_sym_slash {
-            bindings = <&kp PT_SLASH>;
-            key-positions = <7 18>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
-        };
-
-        combo_sym_bslh {
-            bindings = <&kp PT_BSLH>;
-            key-positions = <2 13>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
-        };
-
-        combo_sym_acute {
-            bindings = <&kp PT_ACUTE>;
-            key-positions = <3 2>;
-            timeout-ms = <25>;
-            require-prior-idle-ms = <150>;
-        };
-
-        combo_sym_grave {
-            bindings = <&kp PT_GRAVE>;
-            key-positions = <2 1>;
-            timeout-ms = <25>;
-            require-prior-idle-ms = <150>;
-        };
-
-        combo_sym_question {
-            bindings = <&hml_combo LA(LCTRL) PT_QUESTION>;
-            key-positions = <12 13>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <25>;
-        };
-
         combo_sym_equal {
-            bindings = <&hml_combo LS(LCTRL) PT_EQUAL>;
-            key-positions = <13 14>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <25>;
-        };
-
-        combo_sym_underscore {
-            bindings = <&hml_combo LA(LCTRL) PT_UNDER>;
-            key-positions = <12 14>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <25>;
-        };
-
-        combo_sym_star {
-            bindings = <&hmr_combo LA(RCTRL) PT_ASTRK>;
+            bindings = <&hmr_combo LA(RCTRL) PT_EQUAL>;
             key-positions = <17 19>;
-            require-prior-idle-ms = <150>;
-            timeout-ms = <25>;
+            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
         };
     };
 
@@ -442,12 +327,12 @@
             bindings = <&kp PT_TILDE &kp PT_A>;
         };
 
-        o_tilde_m: o_tilde_m {
+        o_caret_m: o_caret_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp PT_TILDE &kp PT_O>;
+            bindings = <&kp PT_CARET &kp PT_O>;
         };
 
         gt_eq_m: qt_eq_m {
@@ -555,7 +440,7 @@
 
         macro_l {
             bindings = <
-        &trans      &trans  &trans  &trans  &trans    &trans          &trans     &trans    &o_tilde_m  &trans
+        &trans      &trans  &trans  &trans  &trans    &trans          &trans     &trans    &o_caret_m  &trans
 &trans  &a_tilde_m  &trans  &trans  &trans  &trans    &tilde_slash_m  &not_eq_m  &eq_eq_m  &jlambda_m  &eq_gt_m  &trans
         &trans      &trans  &trans  &none   &trans    &trans          &none      &lt_eq_m  &gt_eq_m    &trans
                             &trans  &trans  &trans    &trans          &trans     &trans
