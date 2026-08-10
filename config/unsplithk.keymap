@@ -313,12 +313,12 @@
             bindings = <&kp PT_TILDE &kp PT_A>;
         };
 
-        o_tilde_m: o_tilde_m {
+        o_caret_m: o_caret_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <15>;
             tap-ms = <15>;
-            bindings = <&kp PT_TILDE &kp PT_O>;
+            bindings = <&kp PT_CARET &kp PT_O>;
         };
 
         gt_eq_m: qt_eq_m {
@@ -426,7 +426,7 @@
 
         macro_l {
             bindings = <
-        &trans      &trans  &trans  &trans  &trans    &trans          &trans     &trans    &o_tilde_m  &trans
+        &trans      &trans  &trans  &trans  &trans    &trans          &trans     &trans    &o_caret_m  &trans
 &trans  &a_tilde_m  &trans  &trans  &trans  &trans    &tilde_slash_m  &not_eq_m  &eq_eq_m  &jlambda_m  &eq_gt_m  &trans
         &trans      &trans  &trans  &none   &trans    &trans          &none      &lt_eq_m  &gt_eq_m    &trans
                             &trans  &trans  &trans    &trans          &trans     &trans

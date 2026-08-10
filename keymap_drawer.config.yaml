@@ -164,7 +164,7 @@ parse_config:
 
     # --- Custom Macros (Layer 8) ---
     "&a_tilde_m": "ã"
-    "&o_tilde_m": "õ"
+    "&o_caret_m": "ô"
     "&tilde_slash_m": "~/"
     "&not_eq_m": "!="
     "&eq_eq_m": "=="
