@@ -155,9 +155,9 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: held}
-  - {t: Middle Click, type: trans}
-  - {type: held}
   - {t: Right Click, type: trans}
+  - {type: held}
+  - {t: Middle Click, type: trans}
   sym:
   - \
   - ''''
