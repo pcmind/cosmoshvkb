@@ -390,7 +390,7 @@
 
         mouse {
             bindings = <
-         &trans           &trans           &trans            &trans            &trans           &trans              &mkp MB3        &mkp LCLK       &mkp RCLK     &trans
+         &trans           &trans           &trans            &trans            &trans           &trans              &trans          &trans          &trans        &trans
 &kp ESC  &hml LWIN LC(A)  &hml LALT LC(S)  &hml LCTRL LC(D)  &hml LSHFT LC(F)  &kp LC(G)        &kp K_CONTEXT_MENU  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
          &kp LC(Z)        &kp LC(X)        &kp LC(C)         &kp LC(V)         &kp LS(LC(Z))    &trans              &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT
                                            &trans            &trans            &trans           &mkp RCLK           &mkp LCLK       &mkp MB3
