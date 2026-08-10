@@ -122,7 +122,7 @@ layers:
   mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+E
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -131,11 +131,11 @@ layers:
   - Right Click
   - {t: ▽, type: trans}
   - {t: ESC, h: toggle}
-  - Ctl+A
-  - LALT
-  - LCTRL
-  - LSHFT
-  - {t: ▽, h: toggle, type: trans}
+  - {t: Ctl+A, h: LWIN}
+  - {t: Ctl+S, h: LALT}
+  - {t: Ctl+D, h: LCTRL}
+  - {t: Ctl+F, h: LSHFT}
+  - {t: Ctl+G, h: toggle, type: trans}
   - CONTEXT MENU
   - Mouse Left
   - Mouse Down
@@ -155,9 +155,9 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: held}
-  - {t: ▽, type: trans}
+  - {t: Middle Click, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
+  - {t: Right Click, type: trans}
   sym:
   - \
   - ''''
