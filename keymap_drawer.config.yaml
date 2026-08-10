@@ -3,114 +3,43 @@
 parse_config:
   raw_binding_map:
     # --- Portuguese Localized Raw Expressions (Preprocessed with Underscores) ---
-    "&kp (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON))": "Ç"
-    "(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON))": "Ç"
-    "&hmr LEFT_GUI (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON))": {t: "Ç", h: "GUI"}
-    
-    "&kp ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND))))": "/"
-    "((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND))))": "/"
+    "&hmr LEFT_GUI (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON))": {t: "Ç", h: $$mdi:penguin$$}
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND)))": "/"
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND)))": "/"
-    
     "&kp (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK))": "-"
-    "(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK))": "-"
-    
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK)))": "_"
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK)))": "_"
-    "&kp ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK))))": "_"
-    "((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK))))": "_"
-    
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS)))": "="
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS)))": "="
-    
     "&kp ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE))))": "*"
-    "((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE))))": "*"
-    
     "&kp (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE))": "+"
-    "(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE))": "+"
-    
     "&kp (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE))": "\\"
-    "(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE))": "\\"
     "&kp ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE)))": "\\"
-    "((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE)))": "\\"
-    
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE)))": "|"
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE)))": "|"
-    
     "&kp (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE))": "~"
-    "(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE))": "~"
-    
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE)))": "^"
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE)))": "^"
-    
+
     "&kp (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE))": "'"
-    "(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE))": "'"
-    
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE)))": "?"
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE)))": "?"
-    
+
     "&kp ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION))))": "!"
-    "((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION))))": "!"
-    "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION)))": "!"
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION)))": "!"
-    
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT)))": "\""
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT)))": "\""
+    
     
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_3_AND_HASH)))": "#"
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_3_AND_HASH)))": "#"
-    
+  
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_4_AND_DOLLAR)))": "$"
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_4_AND_DOLLAR)))": "$"
-    
     "&kp (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT)))": "€"
-    "(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT)))": "€"
-    
     "&kp ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT))))": "@"
-    "((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT))))": "@"
-    
     "&kp ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE)))": "º"
-    "((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE)))": "º"
-    
     "&kp ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE))))": "ª"
-    "((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE))))": "ª"
-    
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE)))": "`"
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE)))": "`"
-    
     "&kp (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))": "´"
-    "(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))": "´"
-    
     "&kp ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_6_AND_CARET))))": "&"
-    "((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_6_AND_CARET))))": "&"
-    
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT)))": "%"
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT)))": "%"
     
     # --- Combos (Portuguese Keycodes) ---
-    "&kp (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))": "<"
-    "(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))": "<"
-    "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))": ">"
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))": ">"
-    "&kp (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND)))": "{"
-    "(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND)))": "{"
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK)))": "("
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK)))": "("
-    "&kp (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK)))": "["
-    "(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK)))": "["
-    "&kp (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS)))": "}"
-    "(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS)))": "}"
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))": ")"
-    "(LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))": ")"
+    "&kp (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK)))": "["
     "&kp (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))": "]"
-    "(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))": "]"
-    "&kp LC((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_C)))": "Ctrl+C"
-    "LC((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_C)))": "Ctrl+C"
-    "&kp LC((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_V)))": "Ctrl+V"
-    "LC((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_V)))": "Ctrl+V"
-    "&kp LC((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_X)))": "Ctrl+X"
-    "LC((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_X)))": "Ctrl+X"
-    
     "&hmr_combo RS(RCTRL) (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND)))": "{"
     "&hmr_combo LA(RCTRL) (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS)))": "}"
     "&hmr_combo LA(RCTRL) (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS)))": "="
@@ -133,8 +62,8 @@ parse_config:
     # --- Custom Hold-Taps (Layer Activations & Comfort Keys) ---
     "&lt_k_repeat 5 TAB": {t: "TAB", h: "FUN"}
     "&lt_k_repeat 1 SPACE": {t: "SPC", h: "NAV"}
-    "&my_triple_function": {t: "ENT", h: "CTL"}
-    "&lt_k_repeat 4 ENTER": {t: "ENT", h: "SYM"}
+    "&my_triple_function": {t: ⮐, h: "CTL"}
+    "&lt_k_repeat 4 ENTER": {t: ⮐, h: "SYM"}
     "&lt_k_repeat 2 BACKSPACE": {t: "BSP", h: "NUM"}
     "&shift_all LEFT_SHIFT 0": {t: "Magic", h: "Shift"}
     "&lrow_layer_to 7 V": {t: "V", h: "MAC"}
@@ -166,7 +95,157 @@ parse_config:
 
     # --- Navigation / Other Controls ---
     "&key_repeat": "REPEAT"
-
+  zmk_keycode_map:
+    EXCLAMATION: '!'
+    EXCL: '!'
+    PT_EXCL: '!'
+    AT_SIGN: '@'
+    AT: '@'
+    PT_AT: '@'
+    HASH: '#'
+    PT_HASH: '#'
+    POUND: '#'
+    DOLLAR: $
+    DLLR: $
+    PT_DLLR: $
+    PERCENT: '%'
+    PRCNT: '%'
+    PT_PRCNT: '%'
+    CARET: ^
+    PT_CARET: ^
+    AMPERSAND: '&'
+    AMPS: '&'
+    PT_AMPS: '&'
+    ASTERISK: '*'
+    ASTRK: '*'
+    STAR: '*'
+    PT_STAR: '*'
+    LEFT_PARENTHESIS: (
+    LPAR: (
+    PT_LPAR: (
+    RIGHT_PARENTHESIS: )
+    RPAR: )
+    PT_RPAR: )
+    EQUAL: '='
+    PT_EQUAL: '='
+    PLUS: +
+    PT_PLUS: +
+    MINUS: '-'
+    PT_MINUS: '-'
+    UNDERSCORE: _
+    UNDER: _
+    PT_UNDER: _
+    SLASH: /
+    FSLH: /
+    PT_FSLH: /
+    QUESTION: '?'
+    QMARK: '?'
+    PT_QMARK: '?'
+    BACKSLASH: \
+    BSLH: \
+    PT_BSLH: \
+    PIPE: '|'
+    PT_PIPE: '|'
+    NON_US_BACKSLASH: \
+    PIPE2: '|'
+    NON_US_BSLH: '|'
+    SEMICOLON: ;
+    SEMI: ;
+    COLON: ':'
+    SINGLE_QUOTE: ''''
+    SQT: ''''
+    PT_SQT: ''''
+    APOSTROPHE: ''''
+    APOS: ''''
+    DOUBLE_QUOTES: '"'
+    DQT: '"'
+    PT_DQT: '"'
+    COMMA: ','
+    LESS_THAN: <
+    LT: <
+    PT_LT: <
+    PERIOD: .
+    DOT: .
+    PT_DOT: .
+    GREATER_THAN: '>'
+    GT: '>'
+    PT_GT: '>'
+    LEFT_BRACKET: '['
+    LBKT: '['
+    PT_LBKT: '['
+    LEFT_BRACE: '{'
+    LBRC: '{'
+    PT_LBRC: '{'
+    RIGHT_BRACKET: ']'
+    RBKT: ']'
+    PT_RBKT: ']'
+    RIGHT_BRACE: '}'
+    RBRC: '}'
+    PT_RBRC: '}'
+    GRAVE: '`'
+    PT_GRAVE: '`'
+    PT_ACUTE: '´'
+    PT_UMLAUT: '¨'
+    TILDE: '~'
+    PT_TILDE: '~'
+    NON_US_HASH: '#'
+    PT_LAQUO: '«'
+    PT_ORDF: 'º'
+    PT_EURO: '€'
+    PT_SECT: '§'
+    NUHS: '#'
+    TILDE2: '~'
+    PAGE_UP: 'PgUp'
+    PAGE_DOWN: 'PgDn'
+    HOME: 'Home'
+    END: 'End'
+    ESC: 'Esc'
+    GLOBE: $$tabler:world$$
+    SPACE: $$mdi:keyboard-space$$
+    BACKSPACE: $$mdi:backspace-outline$$
+    DELETE: $$mdi:backspace-reverse-outline$$
+    C_PP: $$mdi:play-pause$$
+    C_NEXT: $$mdi:skip-forward$$
+    C_PREV: $$mdi:skip-backward$$
+    C_MUTE: $$mdi:volume-mute$$
+    C_VOL_UP: $$mdi:volume-plus$$
+    C_VOL_DN: $$mdi:volume-minus$$
+    C_BRI_UP: $$tabler:brightness-up$$
+    C_BRI_DN: $$tabler:brightness-down$$
+    C_POWER: $$mdi:power$$
+    C_SLEEP: $$mdi:power-sleep$$
+    UP: $$mdi:arrow-up$$
+    UP_ARROW: $$mdi:arrow-up$$
+    DOWN: $$mdi:arrow-down$$
+    DOWN_ARROW: $$mdi:arrow-down$$
+    LEFT: $$mdi:arrow-left$$
+    RIGHT: $$mdi:arrow-right$$
+    RETURN: ⮐
+    RET: ⮐
+    KP_NUMLOCK: Numlock
+    TAB: $$mdi:keyboard-tab$$
+    LWIN: $$mdi:penguin$$
+    LEFT_GUI: $$mdi:penguin$$
+    LGUI: $$mdi:penguin$$
+    RIGHT_GUI: $$mdi:penguin$$
+    RGUI: $$mdi:penguin$$
+    LEFT_ALT: $$mdi:apple-keyboard-option$$
+    LALT: $$mdi:apple-keyboard-option$$
+    RIGHT_ALT: $$mdi:apple-keyboard-option$$
+    RALT: $$mdi:apple-keyboard-option$$
+    LEFT_SHIFT: $$mdi:apple-keyboard-shift$$
+    LSHIFT: $$mdi:apple-keyboard-shift$$
+    LSHFT: $$mdi:apple-keyboard-shift$$
+    RIGHT_SHIFT: $$mdi:apple-keyboard-shift$$
+    RSHIFT: $$mdi:apple-keyboard-shift$$
+    RSHFT: $$mdi:apple-keyboard-shift$$
+    RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
+    RCTRL: $$mdi:apple-keyboard-control$$
+    LCTRL: $$mdi:apple-keyboard-control$$
+    LEFT_CONTROL: $$mdi:apple-keyboard-control$$
+    RA(S): 'ß'
+    # LC(LA(LS(J))): $$mdi:face$$
+    Meh-J: $$mdi:face$$
 # Styling configuration to make it look premium
 draw_config:
   key_w: 60.0

@@ -152,7 +152,7 @@ def generate_layout():
     held_keys = {
         'nav': {33: '  - {type: held}'},
         'num': {36: '  - {type: held}'},
-        'mouse': {33: '  - {type: held}', 36: '  - {type: held}'},
+        'mouse': {34: '  - {type: held}'},
         'sym': {35: '  - {type: held}'},
         'fun': {32: '  - {type: held}'},
         'macro_l': {25: '  - {type: held}'},
@@ -243,11 +243,6 @@ def generate_layout():
             "- p: [35, 36, 37]\n  k: bluetooth",
             "- p: [35, 36, 37]\n  k: bluetooth\n  l: [default]\n  a: bottom"
         )
-        
-    # 3. mouse tri-layer conditional combo: visually link NAV thumb (33) and NUM thumb (36) to show Mouse layer access
-    tri_combo = "- p: [33, 36]\n  k: mouse\n  l: [default]\n  a: bottom"
-    if "k: mouse" not in content:
-        content = content.replace("combos:\n", f"combos:\n{tri_combo}\n")
         
     # 4. align underscore and star combos to top of the keyboard (above the entire keyboard layout)
     if "- p: [12, 14]\n  k: {t: _, h: Alt+Ctrl}\n  a: top" not in content:
