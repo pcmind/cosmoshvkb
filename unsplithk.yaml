@@ -37,27 +37,27 @@ layers:
   - {t: '-', s: _}
   - {t: TAB, h: FUN}
   - {t: SPC, h: NAV}
-  - {t: ENTER, h: LCTRL}
+  - {t: ENTER, h: mouse}
   - {t: ENT, h: SYM}
   - {t: BSP, h: NUM}
   - {t: Magic, h: Shift}
   nav:
-  - {t: ▽, type: trans}
-  - Ctl+AltGr+LEFT
-  - Ctl+Alt+RIGHT
-  - {t: ▽, type: trans}
-  - Gui+Ctl+LEFT ARROW
+  - {t: Ctl+Q, type: trans}
+  - Ctl+W
+  - Ctl+E
+  - {t: Ctl+R, type: trans}
+  - Ctl+T
   - CANCEL
   - REPEAT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BACKSPACE
-  - LEFT GUI
-  - LEFT ALT
-  - LEFT CONTROL
-  - LEFT SHIFT
-  - Gui+Ctl+RIGHT ARROW
+  - {t: Ctl+A, h: LEFT GUI}
+  - {t: Ctl+S, h: LEFT ALT}
+  - {t: Ctl+D, h: LEFT CONTROL}
+  - {t: Ctl+F, h: LEFT SHIFT}
+  - Ctl+G
   - CLCK
   - LEFT
   - DOWN ARROW
@@ -154,7 +154,7 @@ layers:
   - Scroll Right
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
+  - {t: ▽, type: held}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
