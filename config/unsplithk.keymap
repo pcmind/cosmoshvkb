@@ -188,14 +188,6 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26>;
         };
 
-        my_triple_function: my_triple_function {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&td_hold_tap LCTRL ENTER>, <&mo 5>, <&sl 5>;
-
-            tapping-term-ms = <170>;
-        };
-
         lt_k_repeat: lt_k_repeat {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&kp>;
@@ -380,7 +372,7 @@
          &kp Q        &kp W        &kp E               &kp R                 &kp T                  &kp Y                 &kp U                     &kp I                    &kp O            &kp P
 &kp ESC  &hml LWIN A  &hml LALT S  &hml LCTRL D        &hml_shift LSHFT F    &kp G                  &kp H                 &hmr_shift RIGHT_SHIFT J  &hmr RCTRL K             &hmr LEFT_ALT L  &hmr LEFT_GUI PT_C_CEDILLA  &kp DEL
          &kp Z        &kp X        &kp C               &lrow_layer_to 7 V    &kp B                  &kp N                 &kp M                     &mm_comma                &mm_dot          &mm_minus
-                                   &lt_k_repeat 5 TAB  &lt_k_repeat 1 SPACE  &my_triple_function    &lt_k_repeat 4 ENTER  &lt_k_repeat 2 BACKSPACE  &shift_all LEFT_SHIFT 0
+                                   &lt_k_repeat 5 TAB  &lt_k_repeat 1 SPACE  &td_hold_tap LCTRL ENTER    &lt_k_repeat 4 ENTER  &lt_k_repeat 2 BACKSPACE  &shift_all LEFT_SHIFT 0
             >;
         };
 

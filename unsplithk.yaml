@@ -37,7 +37,7 @@ layers:
   - {t: '-', s: _}
   - {t: TAB, h: FUN}
   - {t: SPC, h: NAV}
-  - {t: ENT, h: CTL}
+  - {t: ENTER, h: LCTRL}
   - {t: ENT, h: SYM}
   - {t: BSP, h: NUM}
   - {t: Magic, h: Shift}
@@ -130,12 +130,12 @@ layers:
   - Left Click
   - Right Click
   - {t: ▽, type: trans}
-  - ESC
+  - {t: ESC, h: toggle}
   - Ctl+A
   - LALT
   - LCTRL
   - LSHFT
-  - {t: ▽, type: trans}
+  - {t: ▽, h: toggle, type: trans}
   - CONTEXT MENU
   - Mouse Left
   - Mouse Down
@@ -224,7 +224,7 @@ layers:
   - F1
   - F2
   - F3
-  - {t: ▽, type: trans}
+  - {t: ▽, h: toggle, type: trans}
   - F24
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
