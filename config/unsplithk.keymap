@@ -48,7 +48,6 @@
         openbrace {
             bindings = <&hmr_combo RS(RCTRL) PT_LEFT_BRACE>;
             key-positions = <17 18>;
-            layers = <0>;
             require-prior-idle-ms = <50>;
             timeout-ms = <50>;
         };
@@ -70,7 +69,6 @@
         closebrace {
             bindings = <&hmr_combo LA(RCTRL) PT_RIGHT_BRACE>;
             key-positions = <18 19>;
-            layers = <0>;
             require-prior-idle-ms = <50>;
             timeout-ms = <50>;
         };

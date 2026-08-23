@@ -1,6 +1,8 @@
 layout:
   qmk_keyboard: unsplithk
   qmk_layout: LAYOUT_unsplithk
+  qmk_keyboard: unsplithk
+  qmk_layout: LAYOUT_unsplithk
 layers:
   default:
   - Q
@@ -155,15 +157,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: Right Click, type: trans}
-  - {t: Left Click, type: held}
-  - {t: Middle Click, type: trans}
+  - Right Click
+  - Left Click
+  - Middle Click
   sym:
   - \
   - ''''
   - '`'
   - ´
-  - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 7 AND AMPERSAND)))
+  - /
   - º
   - '~'
   - ^
@@ -319,14 +321,12 @@ combos:
   k: <
 - p: [17, 18]
   k: '{'
-  l: [default]
 - p: [6, 7]
   k: (
 - p: [28, 29]
   k: '['
 - p: [18, 19]
   k: '}'
-  l: [default]
 - p: [13, 14]
   k: '>'
 - p: [7, 8]
