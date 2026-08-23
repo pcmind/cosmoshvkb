@@ -1,8 +1,6 @@
 layout:
   qmk_keyboard: unsplithk
   qmk_layout: LAYOUT_unsplithk
-  qmk_keyboard: unsplithk
-  qmk_layout: LAYOUT_unsplithk
 layers:
   default:
   - Q
@@ -170,7 +168,7 @@ layers:
   - '~'
   - ^
   - ª
-  - ª
+  - {t: ▽, type: trans}
   - €
   - '|'
   - '*'
@@ -189,9 +187,9 @@ layers:
   - '#'
   - $
   - {t: ▽, type: trans}
+  - +
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:apple-keyboard-option$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
