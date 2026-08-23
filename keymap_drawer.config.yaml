@@ -4,7 +4,7 @@ parse_config:
   raw_binding_map:
     # --- Portuguese Localized Raw Expressions (Preprocessed with Underscores) ---
     "&hmr LEFT_GUI (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON))": {t: "Ç", h: $$mdi:penguin$$}
-    "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND)))": "/"
+    "&kp ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND))))": "/"
     "&kp (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK))": "-"
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK)))": "_"
     "&kp (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS)))": "="
@@ -64,7 +64,7 @@ parse_config:
     "&lt_k_repeat 1 SPACE": {t: "SPC", h: "NAV"}
     "&my_triple_function": {t: ⮐, h: "CTL"}
     "&lt_k_repeat 4 ENTER": {t: ⮐, h: "SYM"}
-    "&lt_k_repeat 2 BACKSPACE": {t: "BSP", h: "NUM"}
+    "&lt_k_repeat 2 BACKSPACE": {t: $$mdi:backspace-outline$$, h: "NUM"}
     "&shift_all LEFT_SHIFT 0": {t: "Magic", h: "Shift"}
     "&lrow_layer_to 7 V": {t: "V", h: "MAC"}
     "&soft_off": "Soft Off"
@@ -84,7 +84,7 @@ parse_config:
 
     # --- Custom Macros (Layer 8) ---
     "&a_tilde_m": "ã"
-    "&o_caret_m": "ô"
+    "&o_tilde_m": "õ"
     "&tilde_slash_m": "~/"
     "&not_eq_m": "!="
     "&eq_eq_m": "=="
